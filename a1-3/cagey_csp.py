@@ -86,14 +86,47 @@ An example of a 3x3 puzzle would be defined as:
 from cspbase import *
 
 def binary_ne_grid(cagey_grid):
-    ##IMPLEMENT
-    pass
+    
+    n, cages = cagey_grid
+
+    csp = CSP("Cagey Binary")
+
+    vars = [[Variable(f'V{i}{j}', domain=list(range(1, n+1))) for j in range(n)] for i in range(n)]
+    for i in range(n):
+        for j in range(n):
+            csp.add_var(vars[i][j])
+
+    
+    
+
+
 
 
 def nary_ad_grid(cagey_grid):
-    ## IMPLEMENT
-    pass
+
+    n, cages = cagey_grid
+
+    csp = CSP("Cagey Unary")
+
+    vars = [[Variable(f'V{i}{j}', domain=list(range(1, n+1))) for j in range(n)] for i in range(n)]
+    for i in range(n):
+        for j in range(n):
+            csp.add_var(vars[i][j])
+            
+
 
 def cagey_csp_model(cagey_grid):
-    ##IMPLEMENT
-    pass
+
+    n, cages = cagey_grid
+
+    csp = CSP("Cagey Mix")
+
+    vars = [[Variable(f'V{i}{j}', domain=list(range(1, n+1))) for j in range(n)] for i in range(n)]
+    for i in range(n):
+        for j in range(n):
+            csp.add_var(vars[i][j])
+
+
+grid = (3, [(3,[(1,1), (2,1)],"+"),(1, [(1,2)], '?'), (8, [(1,3), (2,3), (2,2)], "+"), (3, [(3,1)], '?'), (3, [(3,2), (3,3)], "+")])
+
+binary_ne_grid(grid)
