@@ -9,6 +9,7 @@
 #
 
 #Look for #IMPLEMENT tags in this file.
+
 '''
 All models need to return a CSP object, and a list of lists of Variable objects
 representing the board. The returned list of lists is used to access the
@@ -84,10 +85,11 @@ An example of a 3x3 puzzle would be defined as:
 '''
 
 from cspbase import *
+import itertools
 
 def binary_ne_grid(cagey_grid):
     
-    n, cages = cagey_grid
+    n, _ = cagey_grid
 
     csp = CSP("Cagey Binary")
 
@@ -97,23 +99,55 @@ def binary_ne_grid(cagey_grid):
             csp.add_var(vars[i][j])
 
     
+
+    for i in range(n):
+        for j in range(n):
+            for k in range(j + 1, n):
+                row_con = Constraint(f"Row-{i}-{j}-{k}", [vars[i][j], vars[i][k]])
+                row_con.add_satisfying_tuples([(x, y) for x in range(1, n + 1) for y in range(1, n + 1) if x != y])
+                csp.add_constraint(row_con)
+
+                col_con = Constraint(f"Col-{i}-{j}-{k}", [vars[j][i], vars[k][i]])
+                col_con.add_satisfying_tuples([(x, y) for x in range(1, n + 1) for y in range(1, n + 1) if x != y])
+                csp.add_constraint(col_con)
     
+    return csp
 
 
-
+def all_diff_tuples(size):
+    # Generate all tuples of size 'size' with all distinct elements
+    return [tup for tup in itertools.permutations(range(1, size+1), size)]
 
 def nary_ad_grid(cagey_grid):
 
-    n, cages = cagey_grid
+    n, _ = cagey_grid
 
-    csp = CSP("Cagey Unary")
+    csp = CSP("Cagey Binary")
 
     vars = [[Variable(f'V{i}{j}', domain=list(range(1, n+1))) for j in range(n)] for i in range(n)]
     for i in range(n):
         for j in range(n):
             csp.add_var(vars[i][j])
-            
 
+    
+
+    for i in range(n):
+        row_vars = vars[i]
+        row_con = Constraint(f"Row-{i}-alldiff", row_vars)
+        row_con.add_satisfying_tuples(all_diff_tuples(n))
+
+        csp.add_constraint(row_con)
+
+        col_vars = vars[j]
+        col_con = Constraint(f"Row-{j}-alldiff", col_vars)
+        col_con.add_satisfying_tuples(all_diff_tuples(n))
+
+        csp.add_constraint(col_con)
+        
+    return csp
+
+    
+            
 
 def cagey_csp_model(cagey_grid):
 
@@ -127,6 +161,3 @@ def cagey_csp_model(cagey_grid):
             csp.add_var(vars[i][j])
 
 
-grid = (3, [(3,[(1,1), (2,1)],"+"),(1, [(1,2)], '?'), (8, [(1,3), (2,3), (2,2)], "+"), (3, [(3,1)], '?'), (3, [(3,2), (3,3)], "+")])
-
-binary_ne_grid(grid)
