@@ -1,7 +1,7 @@
 # =============================
-# Student Names:
-# Group ID:
-# Date:
+# Student Names: Daniel Lister, Jackson Walker, Benjamin Falkner
+# Group ID: 40
+# Date: January 22 2024
 # =============================
 # CISC 352 - W23
 # cagey_csp.py
