@@ -100,6 +100,7 @@ def binary_ne_grid(cagey_grid):
 
     
 
+
     for i in range(n):
         for j in range(n):
             for k in range(j + 1, n):
@@ -157,15 +158,73 @@ def cagey_csp_model(cagey_grid):
 
     vars = csp.get_all_vars()
 
-    for i in range (cages):
-        cage = cages[i]
-        con_vars = cage[1]
-        for j in range(con_vars):
-            
-            
+   
+    for cage in cages:
+        
+        target,cells,op = cage
+        
+        con_vars = []
+        
+        for cell in cells:
+            index = (cell[0] - 1) * n + (cell[1] - 1) 
+            con_vars.append(vars[index])
+
+        
+        con = Constraint(f"Cage-{cells}", con_vars)
+        sat_tup = find_sat_tuples(n,target,con_vars,op)
+        con.add_satisfying_tuples(sat_tup)
+        csp.add_constraint(con)
+
+        
+       
+    return csp
+        
+def find_sat_tuples(n, target, cage_vars, op):
+    sat_tup = []
+    cage_size = len(cage_vars)
+
+    # Generate all possible combinations of values
+    all_combinations = itertools.product(range(1, n + 1), repeat=cage_size)
+
+    for combo in all_combinations:
+        if op == '+':
+            if sum(combo) == target:
+                sat_tup.append(combo)
+        elif op == '-':
+            # Subtraction: Check all pairs in the combo for the target difference
+            for i in range(cage_size):
+                for j in range(cage_size):
+                    if i != j and abs(combo[i] - combo[j]) == target:
+                        sat_tup.append(combo)
+        elif op == '*':
+            product = 1
+            for num in combo:
+                product *= num
+            if product == target:
+                sat_tup.append(combo)
+        elif op == '/':
+            # Division: Check all pairs in the combo for the target quotient
+            for i in range(cage_size):
+                for j in range(cage_size):
+                    if i != j and (combo[i] / combo[j] == target or combo[j] / combo[i] == target):
+                        sat_tup.append(combo)
+        elif op == '?':
+            # If operation is unknown, consider all combinations
+            sat_tup.append(combo)
+
+    # Remove duplicates if any
+    sat_tup = [tuple(sorted(tup)) for tup in sat_tup]
+    sat_tup = list(set(sat_tup))
+
+    return sat_tup
 
         
 
-        
-        
+grid = (3, [(3,[(1,1), (2,1)],"+"),(1, [(1,2)], '?'), (8, [(1,3), (2,3), (2,2)], "+"), (3, [(3,1)], '?'), (3, [(3,2), (3,3)], "+")])
 
+csp = cagey_csp_model(grid)
+
+cons = csp.get_all_cons()
+
+for con in cons:
+    print(con)
