@@ -153,11 +153,19 @@ def cagey_csp_model(cagey_grid):
 
     n, cages = cagey_grid
 
-    csp = CSP("Cagey Mix")
+    csp = binary_ne_grid(cagey_grid)
 
-    vars = [[Variable(f'V{i}{j}', domain=list(range(1, n+1))) for j in range(n)] for i in range(n)]
-    for i in range(n):
-        for j in range(n):
-            csp.add_var(vars[i][j])
+    vars = csp.get_all_vars()
 
+    for i in range (cages):
+        cage = cages[i]
+        con_vars = cage[1]
+        for j in range(con_vars):
+            
+            
+
+        
+
+        
+        
 
