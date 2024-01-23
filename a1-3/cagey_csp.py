@@ -98,8 +98,6 @@ def binary_ne_grid(cagey_grid):
         for j in range(n):
             csp.add_var(vars[i][j])
 
-    
-
 
     for i in range(n):
         for j in range(n):

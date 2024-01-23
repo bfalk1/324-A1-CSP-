@@ -28,7 +28,7 @@
           then newly_instantiated_variable is the most
            recently assigned variable of the search.
       else:
-          progator is called before any assignments are made
+          propagator is called before any assignments are made
           in which case it must decide what processing to do
            prior to any variables being assigned. SEE BELOW
 
@@ -91,9 +91,27 @@ def prop_FC(csp, newVar=None):
     '''Do forward checking. That is check constraints with
        only one uninstantiated variable. Remember to keep
        track of all pruned variable,value pairs and return '''
-    #IMPLEMENT
-    pass
+    pruned = []
+    if not newVar:
+        return True, pruned
+    for c in csp.get_cons_with_var(newVar):
+        if c.get_n_unasgn() == 1:
+            var = c.get_unasgn_vars()[0] # Single unassigned var in cons
+            cur_domain = var.cur_domain()
 
+            cur_domain_copy = cur_domain.copy()
+
+            for val in cur_domain_copy:
+                # If the value violates a constraint, prune it
+                if not c.check_var_val(var, val):
+                    var.prune_value(val)
+                    pruned.append((var, val))
+                    cur_domain.remove(val)
+
+            if len(cur_domain) == 0:
+                return False, pruned
+
+    return True, pruned
 
 def prop_GAC(csp, newVar=None):
     '''Do GAC propagation. If newVar is None we do initial GAC enforce
