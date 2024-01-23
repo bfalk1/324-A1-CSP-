@@ -1288,7 +1288,7 @@ def test_cages_1_correct():
 
     con0.add_satisfying_tuples([('+', 1, 1, 1, 1)])
 
-    print(con0)
+   
 
     answer = [con0]
 
