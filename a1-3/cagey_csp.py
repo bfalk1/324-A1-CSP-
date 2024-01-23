@@ -174,13 +174,15 @@ def cagey_csp_model(cagey_grid):
         op_var_name = f'Cage_op({target}:{op}:[{", ".join(f"Var-Cell({cell[0]},{cell[1]})" for cell in cells)}])'
         
 
+        op_var = Variable(op_var_name, ['+', '-', '/', '*', 'f'])
+        csp.add_var(op_var)
         # Fetch the corresponding variable objects for each cell in the cage and prepend the operation variable.
-        con_vars = [Variable(op_var_name, ['+', '-', '/', '*', 'f'])]  # Start with a list containing the first element
+        con_vars = [op_var]  # Start with a list containing the first element
         con_vars.extend(vars[cell[0] - 1][cell[1] - 1] for cell in cells)  # Extend the list with the list comprehension
 
 
         # Create a constraint with these variables.
-        con = Constraint(f"Cage-{cells}", con_vars)
+        con = Constraint(f"Cage{cells}", con_vars)
 
         # Find satisfying tuples for the constraint.
         sat_tup = find_sat_tuples(n, target, con_vars, op)
@@ -199,7 +201,7 @@ def cagey_csp_model(cagey_grid):
 
 def find_sat_tuples(n, target, cage_vars, op):
     sat_tup = []
-    cage_size = len(cage_vars)
+    cage_size = len(cage_vars) -1
 
     # Generate all possible combinations of values
     all_combinations = itertools.product(range(1, n + 1), repeat=cage_size)
@@ -207,31 +209,32 @@ def find_sat_tuples(n, target, cage_vars, op):
     for combo in all_combinations:
         if op == '+':
             if sum(combo) == target:
-                sat_tup.append(combo)
+                sat_tup.append((op, ) +combo)
         elif op == '-':
             # Subtraction: Check all pairs in the combo for the target difference
             for i in range(cage_size):
                 for j in range(cage_size):
                     if i != j and abs(combo[i] - combo[j]) == target:
-                        sat_tup.append(combo)
+                        sat_tup.append((op, ) + combo)
         elif op == '*':
             product = 1
             for num in combo:
                 product *= num
             if product == target:
-                sat_tup.append(combo)
+                sat_tup.append((op, ) +combo)
         elif op == '/':
             # Division: Check all pairs in the combo for the target quotient
             for i in range(cage_size):
                 for j in range(cage_size):
                     if i != j and (combo[i] / combo[j] == target or combo[j] / combo[i] == target):
-                        sat_tup.append(combo)
+                        sat_tup.append((op, ) +combo)
         elif op == '?':
             # If operation is unknown, consider all combinations
-            sat_tup.append(combo)
+            sat_tup.append((op, ) +combo)
 
     # Remove duplicates if any
     sat_tup = [(t[0],) + tuple(sorted(t[1:])) for t in set(sat_tup)]
+    print(sat_tup)
 
     sat_tup = list(set(sat_tup))
 
