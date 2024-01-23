@@ -171,7 +171,7 @@ def cagey_csp_model(cagey_grid):
         target, cells, op = cage
         
        # Create a special Variable object for the operation
-        op_var_name = f'Cage_op({target}:{op}:[{", ".join(f"Var-Cell{cell[0]}{cell[1]}" for cell in cells)}])'
+        op_var_name = f'Cage_op({target}:{op}:[{", ".join(f"Var-Cell({cell[0]},{cell[1]})" for cell in cells)}])'
         
 
         # Fetch the corresponding variable objects for each cell in the cage and prepend the operation variable.
