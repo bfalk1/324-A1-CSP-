@@ -12402,3 +12402,9 @@ Code quality: ?/0.25
 Running time: 2024_01_23-13:10:44
 
 ===========================================
+test_bne_grid_1 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_2 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_3 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_4 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_5 (__main__.TestBinaryGrid) ... ok
+test_cage_existence (__main__.TestCageConstraints) ... 
