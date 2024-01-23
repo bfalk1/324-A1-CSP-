@@ -112,7 +112,7 @@ def binary_ne_grid(cagey_grid):
                 col_con.add_satisfying_tuples([(x, y) for x in range(1, n + 1) for y in range(1, n + 1) if x != y])
                 csp.add_constraint(col_con)
     
-    return csp
+    return csp,vars
 
 
 def all_diff_tuples(size):
@@ -144,41 +144,59 @@ def nary_ad_grid(cagey_grid):
         col_con.add_satisfying_tuples(all_diff_tuples(n))
 
         csp.add_constraint(col_con)
+
+
         
-    return csp
+    return csp,vars
 
     
             
 
 def cagey_csp_model(cagey_grid):
-
     n, cages = cagey_grid
 
-    csp = binary_ne_grid(cagey_grid)
+    # Create the CSP object.
+    csp = CSP("cagey grid")
 
-    vars = csp.get_all_vars()
+    # Initialize the variables with the expected naming convention.
+    vars = [[Variable(f'Cell{i}{j}', domain=list(range(1, n+1))) for j in range(1, n+1)] for i in range(1, n+1)]
+    for i in range(1, n+1):
+        for j in range(1, n+1):
+            # Add each variable to the CSP.
+            csp.add_var(vars[i-1][j-1])
 
    
+    # Create and add constraints for each cage.
     for cage in cages:
+        target, cells, op = cage
         
-        target,cells,op = cage
+       # Create a special Variable object for the operation
+        op_var_name = f'Cage_op({target}:{op}:[{", ".join(f"Var-Cell{cell[0]}{cell[1]}" for cell in cells)}])'
         
-        con_vars = []
-        
-        for cell in cells:
-            index = (cell[0] - 1) * n + (cell[1] - 1) 
-            con_vars.append(vars[index])
 
-        
+        # Fetch the corresponding variable objects for each cell in the cage and prepend the operation variable.
+        con_vars = [Variable(op_var_name, ['+', '-', '/', '*', 'f'])]  # Start with a list containing the first element
+        con_vars.extend(vars[cell[0] - 1][cell[1] - 1] for cell in cells)  # Extend the list with the list comprehension
+
+
+        # Create a constraint with these variables.
         con = Constraint(f"Cage-{cells}", con_vars)
-        sat_tup = find_sat_tuples(n,target,con_vars,op)
+
+        # Find satisfying tuples for the constraint.
+        sat_tup = find_sat_tuples(n, target, con_vars, op)
+        
+        # Add satisfying tuples to the constraint and add it to the CSP.
         con.add_satisfying_tuples(sat_tup)
         csp.add_constraint(con)
 
         
+
+    # Flatten the vars list to match the 1D structure if needed.
+    vars_flat = [var for sublist in vars for var in sublist]
        
-    return csp
-        
+    return csp, vars_flat
+
+
 def find_sat_tuples(n, target, cage_vars, op):
     sat_tup = []
     cage_size = len(cage_vars)
@@ -213,18 +231,10 @@ def find_sat_tuples(n, target, cage_vars, op):
             sat_tup.append(combo)
 
     # Remove duplicates if any
-    sat_tup = [tuple(sorted(tup)) for tup in sat_tup]
+    sat_tup = [(t[0],) + tuple(sorted(t[1:])) for t in set(sat_tup)]
+
     sat_tup = list(set(sat_tup))
 
     return sat_tup
 
         
-
-grid = (3, [(3,[(1,1), (2,1)],"+"),(1, [(1,2)], '?'), (8, [(1,3), (2,3), (2,2)], "+"), (3, [(3,1)], '?'), (3, [(3,2), (3,3)], "+")])
-
-csp = cagey_csp_model(grid)
-
-cons = csp.get_all_cons()
-
-for con in cons:
-    print(con)
