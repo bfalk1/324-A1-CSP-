@@ -823,6 +823,7 @@ class TestCageConstraints(unittest.TestCase):
             gue = guess[g]
             for a in range(len(correct)):
                 ans = correct[a]
+                
                 if gue.sat_tuples == ans.sat_tuples and a not in answered:
                     CAGE_POINTS += 1.5
                     answered.append(a)

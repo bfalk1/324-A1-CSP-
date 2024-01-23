@@ -15241,3 +15241,2574 @@ Code quality: ?/0.25
 Running time: 2024_01_23-13:54:37
 
 ===========================================
+test_bne_grid_1 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_2 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_3 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_4 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_5 (__main__.TestBinaryGrid) ... ok
+test_cage_existence (__main__.TestCageConstraints) ... FAIL
+test_cages_1 (__main__.TestCageConstraints) ... ok
+test_cages_2 (__main__.TestCageConstraints) ... ok
+test_cages_3 (__main__.TestCageConstraints) ... FAIL
+test_cages_4 (__main__.TestCageConstraints) ... FAIL
+test_cages_5 (__main__.TestCageConstraints) ... ok
+test_cages_6 (__main__.TestCageConstraints) ... ok
+test_dh_1 (__main__.TestDH) ... FAIL
+test_dh_2 (__main__.TestDH) ... FAIL
+test_dh_3 (__main__.TestDH) ... FAIL
+test_dh_4 (__main__.TestDH) ... FAIL
+test_mrv_1 (__main__.TestMRV) ... FAIL
+test_mrv_2 (__main__.TestMRV) ... FAIL
+test_mrv_3 (__main__.TestMRV) ... FAIL
+test_mrv_4 (__main__.TestMRV) ... FAIL
+test_nary_grid_1 (__main__.TestNaryGrid) ... ok
+test_nary_grid_2 (__main__.TestNaryGrid) ... ok
+test_nary_grid_3 (__main__.TestNaryGrid) ... ok
+test_nary_grid_4 (__main__.TestNaryGrid) ... ok
+test_bin_prop_fc_0 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_1 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_2 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_3 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_4 (__main__.TestPropFC) ... ok
+test_prop_fc_0 (__main__.TestPropFC) ... ok
+test_prop_fc_1 (__main__.TestPropFC) ... ok
+test_prop_fc_2 (__main__.TestPropFC) ... ok
+test_prop_fc_3 (__main__.TestPropFC) ... ok
+test_prop_fc_4 (__main__.TestPropFC) ... ok
+test_prop_GAC_0 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_1 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_2 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_3 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_4 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_5 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_6 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_7 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_8 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_9 (__main__.TestPropGAC) ... FAIL
+
+======================================================================
+FAIL: test_cage_existence (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+AssertionError: False is not true : failed to find cage variable
+
+======================================================================
+FAIL: test_cages_3 (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Failed to encode:
+ {('*', 1, 1, 2, 2): True, ('*', 1, 2, 1, 2): True, ('*', 1, 2, 2, 1): True, ('*', 2, 1, 1, 2): True, ('*', 2, 1, 2, 1): True, ('*', 2, 2, 1, 1): True}
+Input board: (2, [(4, [(1, 1), (1, 2), (2, 1), (2, 2)], '*')])
+
+
+Encoded incorrect constraint:
+ {('*', 1, 1, 2, 2): True}
+
+======================================================================
+FAIL: test_cages_4 (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Failed to encode:
+ {('+', 1, 1, 1, 1, 3, 3): True, ('+', 1, 1, 1, 2, 2, 3): True, ('+', 1, 1, 1, 2, 3, 2): True, ('+', 1, 1, 1, 3, 1, 3): True, ('+', 1, 1, 1, 3, 2, 2): True, ('+', 1, 1, 1, 3, 3, 1): True, ('+', 1, 1, 2, 1, 2, 3): True, ('+', 1, 1, 2, 1, 3, 2): True, ('+', 1, 1, 2, 2, 1, 3): True, ('+', 1, 1, 2, 2, 2, 2): True, ('+', 1, 1, 2, 2, 3, 1): True, ('+', 1, 1, 2, 3, 1, 2): True, ('+', 1, 1, 2, 3, 2, 1): True, ('+', 1, 1, 3, 1, 1, 3): True, ('+', 1, 1, 3, 1, 2, 2): True, ('+', 1, 1, 3, 1, 3, 1): True, ('+', 1, 1, 3, 2, 1, 2): True, ('+', 1, 1, 3, 2, 2, 1): True, ('+', 1, 1, 3, 3, 1, 1): True, ('+', 1, 2, 1, 1, 2, 3): True, ('+', 1, 2, 1, 1, 3, 2): True, ('+', 1, 2, 1, 2, 1, 3): True, ('+', 1, 2, 1, 2, 2, 2): True, ('+', 1, 2, 1, 2, 3, 1): True, ('+', 1, 2, 1, 3, 1, 2): True, ('+', 1, 2, 1, 3, 2, 1): True, ('+', 1, 2, 2, 1, 1, 3): True, ('+', 1, 2, 2, 1, 2, 2): True, ('+', 1, 2, 2, 1, 3, 1): True, ('+', 1, 2, 2, 2, 1, 2): True, ('+', 1, 2, 2, 2, 2, 1): True, ('+', 1, 2, 2, 3, 1, 1): True, ('+', 1, 2, 3, 1, 1, 2): True, ('+', 1, 2, 3, 1, 2, 1): True, ('+', 1, 2, 3, 2, 1, 1): True, ('+', 1, 3, 1, 1, 1, 3): True, ('+', 1, 3, 1, 1, 2, 2): True, ('+', 1, 3, 1, 1, 3, 1): True, ('+', 1, 3, 1, 2, 1, 2): True, ('+', 1, 3, 1, 2, 2, 1): True, ('+', 1, 3, 1, 3, 1, 1): True, ('+', 1, 3, 2, 1, 1, 2): True, ('+', 1, 3, 2, 1, 2, 1): True, ('+', 1, 3, 2, 2, 1, 1): True, ('+', 1, 3, 3, 1, 1, 1): True, ('+', 2, 1, 1, 1, 2, 3): True, ('+', 2, 1, 1, 1, 3, 2): True, ('+', 2, 1, 1, 2, 1, 3): True, ('+', 2, 1, 1, 2, 2, 2): True, ('+', 2, 1, 1, 2, 3, 1): True, ('+', 2, 1, 1, 3, 1, 2): True, ('+', 2, 1, 1, 3, 2, 1): True, ('+', 2, 1, 2, 1, 1, 3): True, ('+', 2, 1, 2, 1, 2, 2): True, ('+', 2, 1, 2, 1, 3, 1): True, ('+', 2, 1, 2, 2, 1, 2): True, ('+', 2, 1, 2, 2, 2, 1): True, ('+', 2, 1, 2, 3, 1, 1): True, ('+', 2, 1, 3, 1, 1, 2): True, ('+', 2, 1, 3, 1, 2, 1): True, ('+', 2, 1, 3, 2, 1, 1): True, ('+', 2, 2, 1, 1, 1, 3): True, ('+', 2, 2, 1, 1, 2, 2): True, ('+', 2, 2, 1, 1, 3, 1): True, ('+', 2, 2, 1, 2, 1, 2): True, ('+', 2, 2, 1, 2, 2, 1): True, ('+', 2, 2, 1, 3, 1, 1): True, ('+', 2, 2, 2, 1, 1, 2): True, ('+', 2, 2, 2, 1, 2, 1): True, ('+', 2, 2, 2, 2, 1, 1): True, ('+', 2, 2, 3, 1, 1, 1): True, ('+', 2, 3, 1, 1, 1, 2): True, ('+', 2, 3, 1, 1, 2, 1): True, ('+', 2, 3, 1, 2, 1, 1): True, ('+', 2, 3, 2, 1, 1, 1): True, ('+', 3, 1, 1, 1, 1, 3): True, ('+', 3, 1, 1, 1, 2, 2): True, ('+', 3, 1, 1, 1, 3, 1): True, ('+', 3, 1, 1, 2, 1, 2): True, ('+', 3, 1, 1, 2, 2, 1): True, ('+', 3, 1, 1, 3, 1, 1): True, ('+', 3, 1, 2, 1, 1, 2): True, ('+', 3, 1, 2, 1, 2, 1): True, ('+', 3, 1, 2, 2, 1, 1): True, ('+', 3, 1, 3, 1, 1, 1): True, ('+', 3, 2, 1, 1, 1, 2): True, ('+', 3, 2, 1, 1, 2, 1): True, ('+', 3, 2, 1, 2, 1, 1): True, ('+', 3, 2, 2, 1, 1, 1): True, ('+', 3, 3, 1, 1, 1, 1): True}
+Input board: (3, [(10, [(1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3)], '+')])
+
+
+Encoded incorrect constraint:
+ {('+', 1, 1, 1, 2, 2, 3): True, ('+', 1, 1, 2, 2, 2, 2): True, ('+', 1, 1, 1, 1, 3, 3): True}
+
+======================================================================
+FAIL: test_dh_1 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_2 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_3 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_4 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_mrv_1 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_2 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_3 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_4 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_prop_GAC_0 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(3, [(3, [(1, 1), (2, 1)], '+'), (2, [(1, 2), (2, 2)], '-'), (6, [(1, 3), (2, 3), (3, 3)], '*'), (5, [(3, 1), (3, 2)], '+')])
+
+
+======================================================================
+FAIL: test_prop_GAC_1 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(6, [(1, 1), (2, 1)], '*'), (3, [(1, 2), (1, 3)], '+'), (3, [(1, 4), (2, 4)], '-'), (7, [(2, 2), (2, 3)], '+'), (2, [(3, 1), (3, 2)], '/'), (3, [(3, 3), (4, 3)], '-'), (6, [(3, 4), (4, 4)], '*'), (7, [(4, 1), (4, 2)], '+')])
+
+
+======================================================================
+FAIL: test_prop_GAC_2 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(16, [(1, 1), (1, 2), (2, 2)], '*'), (7, [(1, 3), (1, 4), (2, 3)], '+'), (4, [(2, 4)], '?'), (2, [(2, 1), (3, 1)], '-'), (2, [(3, 3), (3, 4)], '/'), (2, [(4, 3), (4, 4)], '/'), (12, [(3, 2), (4, 1), (4, 2)], '*')])
+
+
+======================================================================
+FAIL: test_prop_GAC_3 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(4, [(1, 1)], '?'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (2, 4)], '-'), (6, [(2, 1), (2, 2), (3, 2)], '+'), (12, [(2, 3), (3, 3), (3, 4)], '*'), (1, [(3, 1), (4, 1)], '-'), (5, [(4, 2), (4, 3)], '+'), (2, [(4, 4)], '?')])
+
+
+======================================================================
+FAIL: test_prop_GAC_4 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(2, [(1, 1), (1, 2)], '/'), (3, [(1, 3), (1, 4), (2, 3)], '*'), (8, [(2, 1), (2, 2), (3, 1)], '+'), (6, [(2, 4), (3, 4)], '*'), (2, [(3, 2), (3, 3)], '-'), (2, [(4, 1), (4, 2)], '-'), (2, [(4, 3), (4, 4)], '/')])
+
+
+======================================================================
+FAIL: test_prop_GAC_5 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(4, [(1, 1), (2, 1)], '-'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (2, 4)], '-'), (1, [(1, 5), (2, 5)], '-'), (9, [(2, 2), (2, 3)], '+'), (3, [(3, 1), (3, 2)], '-'), (6, [(3, 3), (3, 4), (4, 4)], '*'), (9, [(3, 5), (4, 5)], '+'), (7, [(4, 1), (5, 1)], '+'), (3, [(4, 2), (4, 3)], '-'), (6, [(5, 2), (5, 3)], '*'), (4, [(5, 4), (5, 5)], '-')])
+
+
+======================================================================
+FAIL: test_prop_GAC_6 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(10, [(1, 1), (1, 2), (2, 1), (2, 2)], '+'), (18, [(1, 3), (1, 4), (2, 3), (2, 4), (3, 4)], '+'), (2, [(1, 5), (2, 5), (3, 5)], '-'), (1, [(3, 1), (3, 2), (3, 3)], '-'), (600, [(4, 1), (4, 2), (4, 3), (5, 1), (5, 2), (5, 3)], '*'), (2, [(4, 4), (5, 4), (5, 5)], '/'), (3, [(4, 5)], '?')])
+
+
+======================================================================
+FAIL: test_prop_GAC_7 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(2, [(1, 1), (2, 1)], '-'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (1, 5)], '-'), (1, [(2, 2)], '?'), (2, [(2, 3), (2, 4)], '-'), (9, [(2, 5), (3, 5), (4, 5)], '+'), (6, [(3, 1), (3, 2)], '*'), (4, [(3, 3)], '?'), (3, [(3, 4), (4, 4)], '+'), (3, [(4, 1), (5, 1)], '-'), (15, [(4, 2), (4, 3)], '*'), (9, [(5, 2), (5, 3)], '+'), (1, [(5, 4), (5, 5)], '-')])
+
+
+======================================================================
+FAIL: test_prop_GAC_8 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(6, [(11, [(1, 1), (2, 1)], '+'), (2, [(1, 2), (1, 3)], '/'), (20, [(1, 4), (2, 4)], '*'), (6, [(1, 5), (1, 6), (2, 6), (3, 6)], '*'), (3, [(2, 2), (2, 3)], '-'), (3, [(2, 5), (3, 5)], '/'), (240, [(3, 1), (3, 2), (4, 1), (4, 2)], '*'), (6, [(3, 3), (3, 4)], '*'), (6, [(4, 3), (5, 3)], '*'), (7, [(4, 4), (5, 4), (5, 5)], '+'), (30, [(4, 5), (4, 6)], '*'), (6, [(5, 1), (5, 2)], '*'), (9, [(5, 6), (6, 6)], '+'), (8, [(6, 1), (6, 2), (6, 3)], '+'), (2, [(6, 4), (6, 5)], '/')])
+
+
+======================================================================
+FAIL: test_prop_GAC_9 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(6, [(2, [(1, 1), (1, 2), (1, 3)], '/'), (3, [(1, 4), (1, 5)], '-'), (11, [(1, 6), (2, 6), (3, 6)], '+'), (2, [(2, 1), (2, 2), (2, 3)], '/'), (40, [(2, 4), (2, 5), (3, 4), (3, 5)], '*'), (14, [(3, 1), (4, 1), (5, 1), (6, 1)], '+'), (3600, [(3, 2), (3, 3), (4, 2), (4, 3), (5, 2), (5, 3)], '*'), (120, [(4, 4), (5, 4), (6, 4)], '*'), (1, [(4, 5), (4, 6), (5, 5), (5, 6)], '-'), (5, [(6, 2), (6, 3)], '-'), (5, [(6, 5), (6, 6)], '+')])
+
+
+----------------------------------------------------------------------
+Ran 44 tests in 1.323s
+
+FAILED (failures=21)
+----------------------------------------------------------------------
+Time spent:
+
+test_bne_grid_1: 0.0004s
+test_bne_grid_2: 0.0002s
+test_bne_grid_3: 0.0010s
+test_bne_grid_4: 0.0030s
+test_bne_grid_5: 0.0095s
+test_cages_1: 0.0001s
+test_cages_2: 0.0001s
+test_cages_3: 0.0001s
+test_cages_4: 0.0004s
+test_cages_5: 0.0022s
+test_cages_6: 0.0002s
+test_nary_grid_1: 0.0001s
+test_nary_grid_2: 0.0005s
+test_nary_grid_3: 0.0029s
+test_nary_grid_4: 0.0234s
+test_bin_prop_fc_0: 0.0004s
+test_bin_prop_fc_1: 0.0012s
+test_bin_prop_fc_2: 0.0012s
+test_bin_prop_fc_3: 0.0012s
+test_bin_prop_fc_4: 0.0013s
+test_prop_fc_0: 0.0006s
+test_prop_fc_1: 0.2696s
+test_prop_fc_2: 0.4903s
+test_prop_fc_3: 0.0007s
+test_prop_fc_4: 0.4800s
+----------------------------------------------------------------------
+Grades:
+
+FC: 0.5/0.5
+GAC: 0.0/0.75
+MRV: 0.0/0.25
+DH: 0.0/0.25
+BINARY: 0.25/0.25
+NARY: 0.25/0.25
+CAGEY: 0.25/0.5
+
+TOTAL: 1.25/2.75
+Code quality: ?/0.25
+
+Running time: 2024_01_23-13:56:16
+
+===========================================
+test_bne_grid_1 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_2 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_3 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_4 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_5 (__main__.TestBinaryGrid) ... ok
+test_cage_existence (__main__.TestCageConstraints) ... FAIL
+test_cages_1 (__main__.TestCageConstraints) ... test_bne_grid_1 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_2 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_3 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_4 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_5 (__main__.TestBinaryGrid) ... ok
+test_cage_existence (__main__.TestCageConstraints) ... FAIL
+test_cages_1 (__main__.TestCageConstraints) ... ok
+test_cages_2 (__main__.TestCageConstraints) ... ok
+test_cages_3 (__main__.TestCageConstraints) ... FAIL
+test_cages_4 (__main__.TestCageConstraints) ... FAIL
+test_cages_5 (__main__.TestCageConstraints) ... ok
+test_cages_6 (__main__.TestCageConstraints) ... ok
+test_dh_1 (__main__.TestDH) ... FAIL
+test_dh_2 (__main__.TestDH) ... FAIL
+test_dh_3 (__main__.TestDH) ... FAIL
+test_dh_4 (__main__.TestDH) ... FAIL
+test_mrv_1 (__main__.TestMRV) ... FAIL
+test_mrv_2 (__main__.TestMRV) ... FAIL
+test_mrv_3 (__main__.TestMRV) ... FAIL
+test_mrv_4 (__main__.TestMRV) ... FAIL
+test_nary_grid_1 (__main__.TestNaryGrid) ... ok
+test_nary_grid_2 (__main__.TestNaryGrid) ... ok
+test_nary_grid_3 (__main__.TestNaryGrid) ... ok
+test_nary_grid_4 (__main__.TestNaryGrid) ... ok
+test_bin_prop_fc_0 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_1 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_2 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_3 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_4 (__main__.TestPropFC) ... ok
+test_prop_fc_0 (__main__.TestPropFC) ... ok
+test_prop_fc_1 (__main__.TestPropFC) ... ok
+test_prop_fc_2 (__main__.TestPropFC) ... ok
+test_prop_fc_3 (__main__.TestPropFC) ... ok
+test_prop_fc_4 (__main__.TestPropFC) ... ok
+test_prop_GAC_0 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_1 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_2 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_3 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_4 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_5 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_6 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_7 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_8 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_9 (__main__.TestPropGAC) ... FAIL
+
+======================================================================
+FAIL: test_cage_existence (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+AssertionError: False is not true : failed to find cage variable
+
+======================================================================
+FAIL: test_cages_3 (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Failed to encode:
+ {('*', 1, 1, 2, 2): True, ('*', 1, 2, 1, 2): True, ('*', 1, 2, 2, 1): True, ('*', 2, 1, 1, 2): True, ('*', 2, 1, 2, 1): True, ('*', 2, 2, 1, 1): True}
+Input board: (2, [(4, [(1, 1), (1, 2), (2, 1), (2, 2)], '*')])
+
+
+Encoded incorrect constraint:
+ {('*', 1, 1, 2, 2): True}
+
+======================================================================
+FAIL: test_cages_4 (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Failed to encode:
+ {('+', 1, 1, 1, 1, 3, 3): True, ('+', 1, 1, 1, 2, 2, 3): True, ('+', 1, 1, 1, 2, 3, 2): True, ('+', 1, 1, 1, 3, 1, 3): True, ('+', 1, 1, 1, 3, 2, 2): True, ('+', 1, 1, 1, 3, 3, 1): True, ('+', 1, 1, 2, 1, 2, 3): True, ('+', 1, 1, 2, 1, 3, 2): True, ('+', 1, 1, 2, 2, 1, 3): True, ('+', 1, 1, 2, 2, 2, 2): True, ('+', 1, 1, 2, 2, 3, 1): True, ('+', 1, 1, 2, 3, 1, 2): True, ('+', 1, 1, 2, 3, 2, 1): True, ('+', 1, 1, 3, 1, 1, 3): True, ('+', 1, 1, 3, 1, 2, 2): True, ('+', 1, 1, 3, 1, 3, 1): True, ('+', 1, 1, 3, 2, 1, 2): True, ('+', 1, 1, 3, 2, 2, 1): True, ('+', 1, 1, 3, 3, 1, 1): True, ('+', 1, 2, 1, 1, 2, 3): True, ('+', 1, 2, 1, 1, 3, 2): True, ('+', 1, 2, 1, 2, 1, 3): True, ('+', 1, 2, 1, 2, 2, 2): True, ('+', 1, 2, 1, 2, 3, 1): True, ('+', 1, 2, 1, 3, 1, 2): True, ('+', 1, 2, 1, 3, 2, 1): True, ('+', 1, 2, 2, 1, 1, 3): True, ('+', 1, 2, 2, 1, 2, 2): True, ('+', 1, 2, 2, 1, 3, 1): True, ('+', 1, 2, 2, 2, 1, 2): True, ('+', 1, 2, 2, 2, 2, 1): True, ('+', 1, 2, 2, 3, 1, 1): True, ('+', 1, 2, 3, 1, 1, 2): True, ('+', 1, 2, 3, 1, 2, 1): True, ('+', 1, 2, 3, 2, 1, 1): True, ('+', 1, 3, 1, 1, 1, 3): True, ('+', 1, 3, 1, 1, 2, 2): True, ('+', 1, 3, 1, 1, 3, 1): True, ('+', 1, 3, 1, 2, 1, 2): True, ('+', 1, 3, 1, 2, 2, 1): True, ('+', 1, 3, 1, 3, 1, 1): True, ('+', 1, 3, 2, 1, 1, 2): True, ('+', 1, 3, 2, 1, 2, 1): True, ('+', 1, 3, 2, 2, 1, 1): True, ('+', 1, 3, 3, 1, 1, 1): True, ('+', 2, 1, 1, 1, 2, 3): True, ('+', 2, 1, 1, 1, 3, 2): True, ('+', 2, 1, 1, 2, 1, 3): True, ('+', 2, 1, 1, 2, 2, 2): True, ('+', 2, 1, 1, 2, 3, 1): True, ('+', 2, 1, 1, 3, 1, 2): True, ('+', 2, 1, 1, 3, 2, 1): True, ('+', 2, 1, 2, 1, 1, 3): True, ('+', 2, 1, 2, 1, 2, 2): True, ('+', 2, 1, 2, 1, 3, 1): True, ('+', 2, 1, 2, 2, 1, 2): True, ('+', 2, 1, 2, 2, 2, 1): True, ('+', 2, 1, 2, 3, 1, 1): True, ('+', 2, 1, 3, 1, 1, 2): True, ('+', 2, 1, 3, 1, 2, 1): True, ('+', 2, 1, 3, 2, 1, 1): True, ('+', 2, 2, 1, 1, 1, 3): True, ('+', 2, 2, 1, 1, 2, 2): True, ('+', 2, 2, 1, 1, 3, 1): True, ('+', 2, 2, 1, 2, 1, 2): True, ('+', 2, 2, 1, 2, 2, 1): True, ('+', 2, 2, 1, 3, 1, 1): True, ('+', 2, 2, 2, 1, 1, 2): True, ('+', 2, 2, 2, 1, 2, 1): True, ('+', 2, 2, 2, 2, 1, 1): True, ('+', 2, 2, 3, 1, 1, 1): True, ('+', 2, 3, 1, 1, 1, 2): True, ('+', 2, 3, 1, 1, 2, 1): True, ('+', 2, 3, 1, 2, 1, 1): True, ('+', 2, 3, 2, 1, 1, 1): True, ('+', 3, 1, 1, 1, 1, 3): True, ('+', 3, 1, 1, 1, 2, 2): True, ('+', 3, 1, 1, 1, 3, 1): True, ('+', 3, 1, 1, 2, 1, 2): True, ('+', 3, 1, 1, 2, 2, 1): True, ('+', 3, 1, 1, 3, 1, 1): True, ('+', 3, 1, 2, 1, 1, 2): True, ('+', 3, 1, 2, 1, 2, 1): True, ('+', 3, 1, 2, 2, 1, 1): True, ('+', 3, 1, 3, 1, 1, 1): True, ('+', 3, 2, 1, 1, 1, 2): True, ('+', 3, 2, 1, 1, 2, 1): True, ('+', 3, 2, 1, 2, 1, 1): True, ('+', 3, 2, 2, 1, 1, 1): True, ('+', 3, 3, 1, 1, 1, 1): True}
+Input board: (3, [(10, [(1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3)], '+')])
+
+
+Encoded incorrect constraint:
+ {('+', 1, 1, 1, 2, 2, 3): True, ('+', 1, 1, 1, 1, 3, 3): True, ('+', 1, 1, 2, 2, 2, 2): True}
+
+======================================================================
+FAIL: test_dh_1 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_2 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_3 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_4 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_mrv_1 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_2 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_3 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_4 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_prop_GAC_0 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(3, [(3, [(1, 1), (2, 1)], '+'), (2, [(1, 2), (2, 2)], '-'), (6, [(1, 3), (2, 3), (3, 3)], '*'), (5, [(3, 1), (3, 2)], '+')])
+
+
+======================================================================
+FAIL: test_prop_GAC_1 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(6, [(1, 1), (2, 1)], '*'), (3, [(1, 2), (1, 3)], '+'), (3, [(1, 4), (2, 4)], '-'), (7, [(2, 2), (2, 3)], '+'), (2, [(3, 1), (3, 2)], '/'), (3, [(3, 3), (4, 3)], '-'), (6, [(3, 4), (4, 4)], '*'), (7, [(4, 1), (4, 2)], '+')])
+
+
+======================================================================
+FAIL: test_prop_GAC_2 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(16, [(1, 1), (1, 2), (2, 2)], '*'), (7, [(1, 3), (1, 4), (2, 3)], '+'), (4, [(2, 4)], '?'), (2, [(2, 1), (3, 1)], '-'), (2, [(3, 3), (3, 4)], '/'), (2, [(4, 3), (4, 4)], '/'), (12, [(3, 2), (4, 1), (4, 2)], '*')])
+
+
+======================================================================
+FAIL: test_prop_GAC_3 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(4, [(1, 1)], '?'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (2, 4)], '-'), (6, [(2, 1), (2, 2), (3, 2)], '+'), (12, [(2, 3), (3, 3), (3, 4)], '*'), (1, [(3, 1), (4, 1)], '-'), (5, [(4, 2), (4, 3)], '+'), (2, [(4, 4)], '?')])
+
+
+======================================================================
+FAIL: test_prop_GAC_4 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(2, [(1, 1), (1, 2)], '/'), (3, [(1, 3), (1, 4), (2, 3)], '*'), (8, [(2, 1), (2, 2), (3, 1)], '+'), (6, [(2, 4), (3, 4)], '*'), (2, [(3, 2), (3, 3)], '-'), (2, [(4, 1), (4, 2)], '-'), (2, [(4, 3), (4, 4)], '/')])
+
+
+======================================================================
+FAIL: test_prop_GAC_5 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(4, [(1, 1), (2, 1)], '-'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (2, 4)], '-'), (1, [(1, 5), (2, 5)], '-'), (9, [(2, 2), (2, 3)], '+'), (3, [(3, 1), (3, 2)], '-'), (6, [(3, 3), (3, 4), (4, 4)], '*'), (9, [(3, 5), (4, 5)], '+'), (7, [(4, 1), (5, 1)], '+'), (3, [(4, 2), (4, 3)], '-'), (6, [(5, 2), (5, 3)], '*'), (4, [(5, 4), (5, 5)], '-')])
+
+
+======================================================================
+FAIL: test_prop_GAC_6 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(10, [(1, 1), (1, 2), (2, 1), (2, 2)], '+'), (18, [(1, 3), (1, 4), (2, 3), (2, 4), (3, 4)], '+'), (2, [(1, 5), (2, 5), (3, 5)], '-'), (1, [(3, 1), (3, 2), (3, 3)], '-'), (600, [(4, 1), (4, 2), (4, 3), (5, 1), (5, 2), (5, 3)], '*'), (2, [(4, 4), (5, 4), (5, 5)], '/'), (3, [(4, 5)], '?')])
+
+
+======================================================================
+FAIL: test_prop_GAC_7 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(2, [(1, 1), (2, 1)], '-'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (1, 5)], '-'), (1, [(2, 2)], '?'), (2, [(2, 3), (2, 4)], '-'), (9, [(2, 5), (3, 5), (4, 5)], '+'), (6, [(3, 1), (3, 2)], '*'), (4, [(3, 3)], '?'), (3, [(3, 4), (4, 4)], '+'), (3, [(4, 1), (5, 1)], '-'), (15, [(4, 2), (4, 3)], '*'), (9, [(5, 2), (5, 3)], '+'), (1, [(5, 4), (5, 5)], '-')])
+
+
+======================================================================
+FAIL: test_prop_GAC_8 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(6, [(11, [(1, 1), (2, 1)], '+'), (2, [(1, 2), (1, 3)], '/'), (20, [(1, 4), (2, 4)], '*'), (6, [(1, 5), (1, 6), (2, 6), (3, 6)], '*'), (3, [(2, 2), (2, 3)], '-'), (3, [(2, 5), (3, 5)], '/'), (240, [(3, 1), (3, 2), (4, 1), (4, 2)], '*'), (6, [(3, 3), (3, 4)], '*'), (6, [(4, 3), (5, 3)], '*'), (7, [(4, 4), (5, 4), (5, 5)], '+'), (30, [(4, 5), (4, 6)], '*'), (6, [(5, 1), (5, 2)], '*'), (9, [(5, 6), (6, 6)], '+'), (8, [(6, 1), (6, 2), (6, 3)], '+'), (2, [(6, 4), (6, 5)], '/')])
+
+
+======================================================================
+FAIL: test_prop_GAC_9 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(6, [(2, [(1, 1), (1, 2), (1, 3)], '/'), (3, [(1, 4), (1, 5)], '-'), (11, [(1, 6), (2, 6), (3, 6)], '+'), (2, [(2, 1), (2, 2), (2, 3)], '/'), (40, [(2, 4), (2, 5), (3, 4), (3, 5)], '*'), (14, [(3, 1), (4, 1), (5, 1), (6, 1)], '+'), (3600, [(3, 2), (3, 3), (4, 2), (4, 3), (5, 2), (5, 3)], '*'), (120, [(4, 4), (5, 4), (6, 4)], '*'), (1, [(4, 5), (4, 6), (5, 5), (5, 6)], '-'), (5, [(6, 2), (6, 3)], '-'), (5, [(6, 5), (6, 6)], '+')])
+
+
+----------------------------------------------------------------------
+Ran 44 tests in 1.320s
+
+FAILED (failures=21)
+----------------------------------------------------------------------
+Time spent:
+
+test_bne_grid_1: 0.0002s
+test_bne_grid_2: 0.0002s
+test_bne_grid_3: 0.0009s
+test_bne_grid_4: 0.0031s
+test_bne_grid_5: 0.0080s
+test_cages_1: 0.0001s
+test_cages_2: 0.0001s
+test_cages_3: 0.0001s
+test_cages_4: 0.0005s
+test_cages_5: 0.0023s
+test_cages_6: 0.0002s
+test_nary_grid_1: 0.0001s
+test_nary_grid_2: 0.0005s
+test_nary_grid_3: 0.0029s
+test_nary_grid_4: 0.0230s
+test_bin_prop_fc_0: 0.0004s
+test_bin_prop_fc_1: 0.0013s
+test_bin_prop_fc_2: 0.0012s
+test_bin_prop_fc_3: 0.0012s
+test_bin_prop_fc_4: 0.0012s
+test_prop_fc_0: 0.0006s
+test_prop_fc_1: 0.2641s
+test_prop_fc_2: 0.4929s
+test_prop_fc_3: 0.0007s
+test_prop_fc_4: 0.4816s
+----------------------------------------------------------------------
+Grades:
+
+FC: 0.5/0.5
+GAC: 0.0/0.75
+MRV: 0.0/0.25
+DH: 0.0/0.25
+BINARY: 0.25/0.25
+NARY: 0.25/0.25
+CAGEY: 0.25/0.5
+
+TOTAL: 1.25/2.75
+Code quality: ?/0.25
+
+Running time: 2024_01_23-13:58:53
+
+===========================================
+test_bne_grid_1 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_2 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_3 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_4 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_5 (__main__.TestBinaryGrid) ... ok
+test_cage_existence (__main__.TestCageConstraints) ... FAIL
+test_cages_1 (__main__.TestCageConstraints) ... FAIL
+test_cages_2 (__main__.TestCageConstraints) ... test_bne_grid_1 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_2 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_3 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_4 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_5 (__main__.TestBinaryGrid) ... ok
+test_cage_existence (__main__.TestCageConstraints) ... FAIL
+test_cages_1 (__main__.TestCageConstraints) ... ok
+test_cages_2 (__main__.TestCageConstraints) ... ok
+test_cages_3 (__main__.TestCageConstraints) ... test_bne_grid_1 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_2 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_3 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_4 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_5 (__main__.TestBinaryGrid) ... ok
+test_cage_existence (__main__.TestCageConstraints) ... FAIL
+test_cages_1 (__main__.TestCageConstraints) ... ok
+test_cages_2 (__main__.TestCageConstraints) ... ok
+test_cages_3 (__main__.TestCageConstraints) ... test_bne_grid_1 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_2 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_3 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_4 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_5 (__main__.TestBinaryGrid) ... ok
+test_cage_existence (__main__.TestCageConstraints) ... FAIL
+test_cages_1 (__main__.TestCageConstraints) ... ok
+test_cages_2 (__main__.TestCageConstraints) ... ok
+test_cages_3 (__main__.TestCageConstraints) ... FAIL
+test_cages_4 (__main__.TestCageConstraints) ... FAIL
+test_cages_5 (__main__.TestCageConstraints) ... ok
+test_cages_6 (__main__.TestCageConstraints) ... ok
+test_dh_1 (__main__.TestDH) ... FAIL
+test_dh_2 (__main__.TestDH) ... FAIL
+test_dh_3 (__main__.TestDH) ... FAIL
+test_dh_4 (__main__.TestDH) ... FAIL
+test_mrv_1 (__main__.TestMRV) ... FAIL
+test_mrv_2 (__main__.TestMRV) ... FAIL
+test_mrv_3 (__main__.TestMRV) ... FAIL
+test_mrv_4 (__main__.TestMRV) ... FAIL
+test_nary_grid_1 (__main__.TestNaryGrid) ... ok
+test_nary_grid_2 (__main__.TestNaryGrid) ... ok
+test_nary_grid_3 (__main__.TestNaryGrid) ... ok
+test_nary_grid_4 (__main__.TestNaryGrid) ... ok
+test_bin_prop_fc_0 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_1 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_2 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_3 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_4 (__main__.TestPropFC) ... ok
+test_prop_fc_0 (__main__.TestPropFC) ... ok
+test_prop_fc_1 (__main__.TestPropFC) ... ok
+test_prop_fc_2 (__main__.TestPropFC) ... ok
+test_prop_fc_3 (__main__.TestPropFC) ... ok
+test_prop_fc_4 (__main__.TestPropFC) ... ok
+test_prop_GAC_0 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_1 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_2 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_3 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_4 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_5 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_6 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_7 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_8 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_9 (__main__.TestPropGAC) ... FAIL
+
+======================================================================
+FAIL: test_cage_existence (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+AssertionError: False is not true : failed to find cage variable
+
+======================================================================
+FAIL: test_cages_3 (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Failed to encode:
+ {('*', 1, 1, 2, 2): True, ('*', 1, 2, 1, 2): True, ('*', 1, 2, 2, 1): True, ('*', 2, 1, 1, 2): True, ('*', 2, 1, 2, 1): True, ('*', 2, 2, 1, 1): True}
+Input board: (2, [(4, [(1, 1), (1, 2), (2, 1), (2, 2)], '*')])
+
+
+Encoded incorrect constraint:
+ {('*', 1, 1, 2, 2): True}
+
+======================================================================
+FAIL: test_cages_4 (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Failed to encode:
+ {('+', 1, 1, 1, 1, 3, 3): True, ('+', 1, 1, 1, 2, 2, 3): True, ('+', 1, 1, 1, 2, 3, 2): True, ('+', 1, 1, 1, 3, 1, 3): True, ('+', 1, 1, 1, 3, 2, 2): True, ('+', 1, 1, 1, 3, 3, 1): True, ('+', 1, 1, 2, 1, 2, 3): True, ('+', 1, 1, 2, 1, 3, 2): True, ('+', 1, 1, 2, 2, 1, 3): True, ('+', 1, 1, 2, 2, 2, 2): True, ('+', 1, 1, 2, 2, 3, 1): True, ('+', 1, 1, 2, 3, 1, 2): True, ('+', 1, 1, 2, 3, 2, 1): True, ('+', 1, 1, 3, 1, 1, 3): True, ('+', 1, 1, 3, 1, 2, 2): True, ('+', 1, 1, 3, 1, 3, 1): True, ('+', 1, 1, 3, 2, 1, 2): True, ('+', 1, 1, 3, 2, 2, 1): True, ('+', 1, 1, 3, 3, 1, 1): True, ('+', 1, 2, 1, 1, 2, 3): True, ('+', 1, 2, 1, 1, 3, 2): True, ('+', 1, 2, 1, 2, 1, 3): True, ('+', 1, 2, 1, 2, 2, 2): True, ('+', 1, 2, 1, 2, 3, 1): True, ('+', 1, 2, 1, 3, 1, 2): True, ('+', 1, 2, 1, 3, 2, 1): True, ('+', 1, 2, 2, 1, 1, 3): True, ('+', 1, 2, 2, 1, 2, 2): True, ('+', 1, 2, 2, 1, 3, 1): True, ('+', 1, 2, 2, 2, 1, 2): True, ('+', 1, 2, 2, 2, 2, 1): True, ('+', 1, 2, 2, 3, 1, 1): True, ('+', 1, 2, 3, 1, 1, 2): True, ('+', 1, 2, 3, 1, 2, 1): True, ('+', 1, 2, 3, 2, 1, 1): True, ('+', 1, 3, 1, 1, 1, 3): True, ('+', 1, 3, 1, 1, 2, 2): True, ('+', 1, 3, 1, 1, 3, 1): True, ('+', 1, 3, 1, 2, 1, 2): True, ('+', 1, 3, 1, 2, 2, 1): True, ('+', 1, 3, 1, 3, 1, 1): True, ('+', 1, 3, 2, 1, 1, 2): True, ('+', 1, 3, 2, 1, 2, 1): True, ('+', 1, 3, 2, 2, 1, 1): True, ('+', 1, 3, 3, 1, 1, 1): True, ('+', 2, 1, 1, 1, 2, 3): True, ('+', 2, 1, 1, 1, 3, 2): True, ('+', 2, 1, 1, 2, 1, 3): True, ('+', 2, 1, 1, 2, 2, 2): True, ('+', 2, 1, 1, 2, 3, 1): True, ('+', 2, 1, 1, 3, 1, 2): True, ('+', 2, 1, 1, 3, 2, 1): True, ('+', 2, 1, 2, 1, 1, 3): True, ('+', 2, 1, 2, 1, 2, 2): True, ('+', 2, 1, 2, 1, 3, 1): True, ('+', 2, 1, 2, 2, 1, 2): True, ('+', 2, 1, 2, 2, 2, 1): True, ('+', 2, 1, 2, 3, 1, 1): True, ('+', 2, 1, 3, 1, 1, 2): True, ('+', 2, 1, 3, 1, 2, 1): True, ('+', 2, 1, 3, 2, 1, 1): True, ('+', 2, 2, 1, 1, 1, 3): True, ('+', 2, 2, 1, 1, 2, 2): True, ('+', 2, 2, 1, 1, 3, 1): True, ('+', 2, 2, 1, 2, 1, 2): True, ('+', 2, 2, 1, 2, 2, 1): True, ('+', 2, 2, 1, 3, 1, 1): True, ('+', 2, 2, 2, 1, 1, 2): True, ('+', 2, 2, 2, 1, 2, 1): True, ('+', 2, 2, 2, 2, 1, 1): True, ('+', 2, 2, 3, 1, 1, 1): True, ('+', 2, 3, 1, 1, 1, 2): True, ('+', 2, 3, 1, 1, 2, 1): True, ('+', 2, 3, 1, 2, 1, 1): True, ('+', 2, 3, 2, 1, 1, 1): True, ('+', 3, 1, 1, 1, 1, 3): True, ('+', 3, 1, 1, 1, 2, 2): True, ('+', 3, 1, 1, 1, 3, 1): True, ('+', 3, 1, 1, 2, 1, 2): True, ('+', 3, 1, 1, 2, 2, 1): True, ('+', 3, 1, 1, 3, 1, 1): True, ('+', 3, 1, 2, 1, 1, 2): True, ('+', 3, 1, 2, 1, 2, 1): True, ('+', 3, 1, 2, 2, 1, 1): True, ('+', 3, 1, 3, 1, 1, 1): True, ('+', 3, 2, 1, 1, 1, 2): True, ('+', 3, 2, 1, 1, 2, 1): True, ('+', 3, 2, 1, 2, 1, 1): True, ('+', 3, 2, 2, 1, 1, 1): True, ('+', 3, 3, 1, 1, 1, 1): True}
+Input board: (3, [(10, [(1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3)], '+')])
+
+
+Encoded incorrect constraint:
+ {('+', 1, 1, 2, 2, 2, 2): True, ('+', 1, 1, 1, 1, 3, 3): True, ('+', 1, 1, 1, 2, 2, 3): True}
+
+======================================================================
+FAIL: test_dh_1 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_2 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_3 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_4 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_mrv_1 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_2 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_3 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_4 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_prop_GAC_0 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(3, [(3, [(1, 1), (2, 1)], '+'), (2, [(1, 2), (2, 2)], '-'), (6, [(1, 3), (2, 3), (3, 3)], '*'), (5, [(3, 1), (3, 2)], '+')])
+
+
+======================================================================
+FAIL: test_prop_GAC_1 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(6, [(1, 1), (2, 1)], '*'), (3, [(1, 2), (1, 3)], '+'), (3, [(1, 4), (2, 4)], '-'), (7, [(2, 2), (2, 3)], '+'), (2, [(3, 1), (3, 2)], '/'), (3, [(3, 3), (4, 3)], '-'), (6, [(3, 4), (4, 4)], '*'), (7, [(4, 1), (4, 2)], '+')])
+
+
+======================================================================
+FAIL: test_prop_GAC_2 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(16, [(1, 1), (1, 2), (2, 2)], '*'), (7, [(1, 3), (1, 4), (2, 3)], '+'), (4, [(2, 4)], '?'), (2, [(2, 1), (3, 1)], '-'), (2, [(3, 3), (3, 4)], '/'), (2, [(4, 3), (4, 4)], '/'), (12, [(3, 2), (4, 1), (4, 2)], '*')])
+
+
+======================================================================
+FAIL: test_prop_GAC_3 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(4, [(1, 1)], '?'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (2, 4)], '-'), (6, [(2, 1), (2, 2), (3, 2)], '+'), (12, [(2, 3), (3, 3), (3, 4)], '*'), (1, [(3, 1), (4, 1)], '-'), (5, [(4, 2), (4, 3)], '+'), (2, [(4, 4)], '?')])
+
+
+======================================================================
+FAIL: test_prop_GAC_4 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(2, [(1, 1), (1, 2)], '/'), (3, [(1, 3), (1, 4), (2, 3)], '*'), (8, [(2, 1), (2, 2), (3, 1)], '+'), (6, [(2, 4), (3, 4)], '*'), (2, [(3, 2), (3, 3)], '-'), (2, [(4, 1), (4, 2)], '-'), (2, [(4, 3), (4, 4)], '/')])
+
+
+======================================================================
+FAIL: test_prop_GAC_5 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(4, [(1, 1), (2, 1)], '-'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (2, 4)], '-'), (1, [(1, 5), (2, 5)], '-'), (9, [(2, 2), (2, 3)], '+'), (3, [(3, 1), (3, 2)], '-'), (6, [(3, 3), (3, 4), (4, 4)], '*'), (9, [(3, 5), (4, 5)], '+'), (7, [(4, 1), (5, 1)], '+'), (3, [(4, 2), (4, 3)], '-'), (6, [(5, 2), (5, 3)], '*'), (4, [(5, 4), (5, 5)], '-')])
+
+
+======================================================================
+FAIL: test_prop_GAC_6 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(10, [(1, 1), (1, 2), (2, 1), (2, 2)], '+'), (18, [(1, 3), (1, 4), (2, 3), (2, 4), (3, 4)], '+'), (2, [(1, 5), (2, 5), (3, 5)], '-'), (1, [(3, 1), (3, 2), (3, 3)], '-'), (600, [(4, 1), (4, 2), (4, 3), (5, 1), (5, 2), (5, 3)], '*'), (2, [(4, 4), (5, 4), (5, 5)], '/'), (3, [(4, 5)], '?')])
+
+
+======================================================================
+FAIL: test_prop_GAC_7 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(2, [(1, 1), (2, 1)], '-'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (1, 5)], '-'), (1, [(2, 2)], '?'), (2, [(2, 3), (2, 4)], '-'), (9, [(2, 5), (3, 5), (4, 5)], '+'), (6, [(3, 1), (3, 2)], '*'), (4, [(3, 3)], '?'), (3, [(3, 4), (4, 4)], '+'), (3, [(4, 1), (5, 1)], '-'), (15, [(4, 2), (4, 3)], '*'), (9, [(5, 2), (5, 3)], '+'), (1, [(5, 4), (5, 5)], '-')])
+
+
+======================================================================
+FAIL: test_prop_GAC_8 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(6, [(11, [(1, 1), (2, 1)], '+'), (2, [(1, 2), (1, 3)], '/'), (20, [(1, 4), (2, 4)], '*'), (6, [(1, 5), (1, 6), (2, 6), (3, 6)], '*'), (3, [(2, 2), (2, 3)], '-'), (3, [(2, 5), (3, 5)], '/'), (240, [(3, 1), (3, 2), (4, 1), (4, 2)], '*'), (6, [(3, 3), (3, 4)], '*'), (6, [(4, 3), (5, 3)], '*'), (7, [(4, 4), (5, 4), (5, 5)], '+'), (30, [(4, 5), (4, 6)], '*'), (6, [(5, 1), (5, 2)], '*'), (9, [(5, 6), (6, 6)], '+'), (8, [(6, 1), (6, 2), (6, 3)], '+'), (2, [(6, 4), (6, 5)], '/')])
+
+
+======================================================================
+FAIL: test_prop_GAC_9 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(6, [(2, [(1, 1), (1, 2), (1, 3)], '/'), (3, [(1, 4), (1, 5)], '-'), (11, [(1, 6), (2, 6), (3, 6)], '+'), (2, [(2, 1), (2, 2), (2, 3)], '/'), (40, [(2, 4), (2, 5), (3, 4), (3, 5)], '*'), (14, [(3, 1), (4, 1), (5, 1), (6, 1)], '+'), (3600, [(3, 2), (3, 3), (4, 2), (4, 3), (5, 2), (5, 3)], '*'), (120, [(4, 4), (5, 4), (6, 4)], '*'), (1, [(4, 5), (4, 6), (5, 5), (5, 6)], '-'), (5, [(6, 2), (6, 3)], '-'), (5, [(6, 5), (6, 6)], '+')])
+
+
+----------------------------------------------------------------------
+Ran 44 tests in 1.326s
+
+FAILED (failures=21)
+----------------------------------------------------------------------
+Time spent:
+
+test_bne_grid_1: 0.0002s
+test_bne_grid_2: 0.0002s
+test_bne_grid_3: 0.0009s
+test_bne_grid_4: 0.0033s
+test_bne_grid_5: 0.0080s
+test_cages_1: 0.0001s
+test_cages_2: 0.0001s
+test_cages_3: 0.0001s
+test_cages_4: 0.0004s
+test_cages_5: 0.0022s
+test_cages_6: 0.0002s
+test_nary_grid_1: 0.0001s
+test_nary_grid_2: 0.0004s
+test_nary_grid_3: 0.0029s
+test_nary_grid_4: 0.0229s
+test_bin_prop_fc_0: 0.0003s
+test_bin_prop_fc_1: 0.0013s
+test_bin_prop_fc_2: 0.0012s
+test_bin_prop_fc_3: 0.0012s
+test_bin_prop_fc_4: 0.0012s
+test_prop_fc_0: 0.0006s
+test_prop_fc_1: 0.2599s
+test_prop_fc_2: 0.4965s
+test_prop_fc_3: 0.0007s
+test_prop_fc_4: 0.4886s
+----------------------------------------------------------------------
+Grades:
+
+FC: 0.5/0.5
+GAC: 0.0/0.75
+MRV: 0.0/0.25
+DH: 0.0/0.25
+BINARY: 0.25/0.25
+NARY: 0.25/0.25
+CAGEY: 0.25/0.5
+
+TOTAL: 1.25/2.75
+Code quality: ?/0.25
+
+Running time: 2024_01_23-14:04:31
+
+===========================================
+test_bne_grid_1 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_2 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_3 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_4 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_5 (__main__.TestBinaryGrid) ... ok
+test_cage_existence (__main__.TestCageConstraints) ... FAIL
+test_cages_1 (__main__.TestCageConstraints) ... ok
+test_cages_2 (__main__.TestCageConstraints) ... ok
+test_cages_3 (__main__.TestCageConstraints) ... test_bne_grid_1 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_2 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_3 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_4 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_5 (__main__.TestBinaryGrid) ... ok
+test_cage_existence (__main__.TestCageConstraints) ... FAIL
+test_cages_1 (__main__.TestCageConstraints) ... ok
+test_cages_2 (__main__.TestCageConstraints) ... ok
+test_cages_3 (__main__.TestCageConstraints) ... ok
+test_cages_4 (__main__.TestCageConstraints) ... ok
+test_cages_5 (__main__.TestCageConstraints) ... ok
+test_cages_6 (__main__.TestCageConstraints) ... ok
+test_dh_1 (__main__.TestDH) ... FAIL
+test_dh_2 (__main__.TestDH) ... FAIL
+test_dh_3 (__main__.TestDH) ... FAIL
+test_dh_4 (__main__.TestDH) ... FAIL
+test_mrv_1 (__main__.TestMRV) ... FAIL
+test_mrv_2 (__main__.TestMRV) ... FAIL
+test_mrv_3 (__main__.TestMRV) ... FAIL
+test_mrv_4 (__main__.TestMRV) ... FAIL
+test_nary_grid_1 (__main__.TestNaryGrid) ... ok
+test_nary_grid_2 (__main__.TestNaryGrid) ... ok
+test_nary_grid_3 (__main__.TestNaryGrid) ... ok
+test_nary_grid_4 (__main__.TestNaryGrid) ... ok
+test_bin_prop_fc_0 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_1 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_2 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_3 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_4 (__main__.TestPropFC) ... ok
+test_prop_fc_0 (__main__.TestPropFC) ... ok
+test_prop_fc_1 (__main__.TestPropFC) ... ok
+test_prop_fc_2 (__main__.TestPropFC) ... ok
+test_prop_fc_3 (__main__.TestPropFC) ... ok
+test_prop_fc_4 (__main__.TestPropFC) ... ok
+test_prop_GAC_0 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_1 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_2 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_3 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_4 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_5 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_6 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_7 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_8 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_9 (__main__.TestPropGAC) ... FAIL
+
+======================================================================
+FAIL: test_cage_existence (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+AssertionError: False is not true : failed to find cage variable
+
+======================================================================
+FAIL: test_dh_1 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_2 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_3 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_4 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_mrv_1 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_2 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_3 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_4 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_prop_GAC_0 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(3, [(3, [(1, 1), (2, 1)], '+'), (2, [(1, 2), (2, 2)], '-'), (6, [(1, 3), (2, 3), (3, 3)], '*'), (5, [(3, 1), (3, 2)], '+')])
+
+
+======================================================================
+FAIL: test_prop_GAC_1 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(6, [(1, 1), (2, 1)], '*'), (3, [(1, 2), (1, 3)], '+'), (3, [(1, 4), (2, 4)], '-'), (7, [(2, 2), (2, 3)], '+'), (2, [(3, 1), (3, 2)], '/'), (3, [(3, 3), (4, 3)], '-'), (6, [(3, 4), (4, 4)], '*'), (7, [(4, 1), (4, 2)], '+')])
+
+
+======================================================================
+FAIL: test_prop_GAC_2 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(16, [(1, 1), (1, 2), (2, 2)], '*'), (7, [(1, 3), (1, 4), (2, 3)], '+'), (4, [(2, 4)], '?'), (2, [(2, 1), (3, 1)], '-'), (2, [(3, 3), (3, 4)], '/'), (2, [(4, 3), (4, 4)], '/'), (12, [(3, 2), (4, 1), (4, 2)], '*')])
+
+
+======================================================================
+FAIL: test_prop_GAC_3 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(4, [(1, 1)], '?'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (2, 4)], '-'), (6, [(2, 1), (2, 2), (3, 2)], '+'), (12, [(2, 3), (3, 3), (3, 4)], '*'), (1, [(3, 1), (4, 1)], '-'), (5, [(4, 2), (4, 3)], '+'), (2, [(4, 4)], '?')])
+
+
+======================================================================
+FAIL: test_prop_GAC_4 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(2, [(1, 1), (1, 2)], '/'), (3, [(1, 3), (1, 4), (2, 3)], '*'), (8, [(2, 1), (2, 2), (3, 1)], '+'), (6, [(2, 4), (3, 4)], '*'), (2, [(3, 2), (3, 3)], '-'), (2, [(4, 1), (4, 2)], '-'), (2, [(4, 3), (4, 4)], '/')])
+
+
+======================================================================
+FAIL: test_prop_GAC_5 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(4, [(1, 1), (2, 1)], '-'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (2, 4)], '-'), (1, [(1, 5), (2, 5)], '-'), (9, [(2, 2), (2, 3)], '+'), (3, [(3, 1), (3, 2)], '-'), (6, [(3, 3), (3, 4), (4, 4)], '*'), (9, [(3, 5), (4, 5)], '+'), (7, [(4, 1), (5, 1)], '+'), (3, [(4, 2), (4, 3)], '-'), (6, [(5, 2), (5, 3)], '*'), (4, [(5, 4), (5, 5)], '-')])
+
+
+======================================================================
+FAIL: test_prop_GAC_6 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(10, [(1, 1), (1, 2), (2, 1), (2, 2)], '+'), (18, [(1, 3), (1, 4), (2, 3), (2, 4), (3, 4)], '+'), (2, [(1, 5), (2, 5), (3, 5)], '-'), (1, [(3, 1), (3, 2), (3, 3)], '-'), (600, [(4, 1), (4, 2), (4, 3), (5, 1), (5, 2), (5, 3)], '*'), (2, [(4, 4), (5, 4), (5, 5)], '/'), (3, [(4, 5)], '?')])
+
+
+======================================================================
+FAIL: test_prop_GAC_7 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(2, [(1, 1), (2, 1)], '-'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (1, 5)], '-'), (1, [(2, 2)], '?'), (2, [(2, 3), (2, 4)], '-'), (9, [(2, 5), (3, 5), (4, 5)], '+'), (6, [(3, 1), (3, 2)], '*'), (4, [(3, 3)], '?'), (3, [(3, 4), (4, 4)], '+'), (3, [(4, 1), (5, 1)], '-'), (15, [(4, 2), (4, 3)], '*'), (9, [(5, 2), (5, 3)], '+'), (1, [(5, 4), (5, 5)], '-')])
+
+
+======================================================================
+FAIL: test_prop_GAC_8 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(6, [(11, [(1, 1), (2, 1)], '+'), (2, [(1, 2), (1, 3)], '/'), (20, [(1, 4), (2, 4)], '*'), (6, [(1, 5), (1, 6), (2, 6), (3, 6)], '*'), (3, [(2, 2), (2, 3)], '-'), (3, [(2, 5), (3, 5)], '/'), (240, [(3, 1), (3, 2), (4, 1), (4, 2)], '*'), (6, [(3, 3), (3, 4)], '*'), (6, [(4, 3), (5, 3)], '*'), (7, [(4, 4), (5, 4), (5, 5)], '+'), (30, [(4, 5), (4, 6)], '*'), (6, [(5, 1), (5, 2)], '*'), (9, [(5, 6), (6, 6)], '+'), (8, [(6, 1), (6, 2), (6, 3)], '+'), (2, [(6, 4), (6, 5)], '/')])
+
+
+======================================================================
+FAIL: test_prop_GAC_9 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(6, [(2, [(1, 1), (1, 2), (1, 3)], '/'), (3, [(1, 4), (1, 5)], '-'), (11, [(1, 6), (2, 6), (3, 6)], '+'), (2, [(2, 1), (2, 2), (2, 3)], '/'), (40, [(2, 4), (2, 5), (3, 4), (3, 5)], '*'), (14, [(3, 1), (4, 1), (5, 1), (6, 1)], '+'), (3600, [(3, 2), (3, 3), (4, 2), (4, 3), (5, 2), (5, 3)], '*'), (120, [(4, 4), (5, 4), (6, 4)], '*'), (1, [(4, 5), (4, 6), (5, 5), (5, 6)], '-'), (5, [(6, 2), (6, 3)], '-'), (5, [(6, 5), (6, 6)], '+')])
+
+
+----------------------------------------------------------------------
+Ran 44 tests in 1.345s
+
+FAILED (failures=19)
+----------------------------------------------------------------------
+Time spent:
+
+test_bne_grid_1: 0.0003s
+test_bne_grid_2: 0.0002s
+test_bne_grid_3: 0.0010s
+test_bne_grid_4: 0.0034s
+test_bne_grid_5: 0.0086s
+test_cages_1: 0.0000s
+test_cages_2: 0.0001s
+test_cages_3: 0.0001s
+test_cages_4: 0.0004s
+test_cages_5: 0.0023s
+test_cages_6: 0.0002s
+test_nary_grid_1: 0.0001s
+test_nary_grid_2: 0.0005s
+test_nary_grid_3: 0.0032s
+test_nary_grid_4: 0.0235s
+test_bin_prop_fc_0: 0.0004s
+test_bin_prop_fc_1: 0.0012s
+test_bin_prop_fc_2: 0.0013s
+test_bin_prop_fc_3: 0.0013s
+test_bin_prop_fc_4: 0.0013s
+test_prop_fc_0: 0.0006s
+test_prop_fc_1: 0.2665s
+test_prop_fc_2: 0.5014s
+test_prop_fc_3: 0.0008s
+test_prop_fc_4: 0.4921s
+----------------------------------------------------------------------
+Grades:
+
+FC: 0.5/0.5
+GAC: 0.0/0.75
+MRV: 0.0/0.25
+DH: 0.0/0.25
+BINARY: 0.25/0.25
+NARY: 0.25/0.25
+CAGEY: 0.375/0.5
+
+TOTAL: 1.375/2.75
+Code quality: ?/0.25
+
+Running time: 2024_01_23-14:15:32
+
+===========================================
+test_bne_grid_1 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_2 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_3 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_4 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_5 (__main__.TestBinaryGrid) ... ok
+test_cage_existence (__main__.TestCageConstraints) ... FAIL
+test_cages_1 (__main__.TestCageConstraints) ... ok
+test_cages_2 (__main__.TestCageConstraints) ... ok
+test_cages_3 (__main__.TestCageConstraints) ... ok
+test_cages_4 (__main__.TestCageConstraints) ... test_bne_grid_1 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_2 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_3 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_4 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_5 (__main__.TestBinaryGrid) ... ok
+test_cage_existence (__main__.TestCageConstraints) ... FAIL
+test_cages_1 (__main__.TestCageConstraints) ... ok
+test_cages_2 (__main__.TestCageConstraints) ... ok
+test_cages_3 (__main__.TestCageConstraints) ... ok
+test_cages_4 (__main__.TestCageConstraints) ... test_bne_grid_1 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_2 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_3 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_4 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_5 (__main__.TestBinaryGrid) ... ok
+test_cage_existence (__main__.TestCageConstraints) ... FAIL
+test_cages_1 (__main__.TestCageConstraints) ... ok
+test_cages_2 (__main__.TestCageConstraints) ... ok
+test_cages_3 (__main__.TestCageConstraints) ... ok
+test_cages_4 (__main__.TestCageConstraints) ... ok
+test_cages_5 (__main__.TestCageConstraints) ... test_bne_grid_1 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_2 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_3 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_4 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_5 (__main__.TestBinaryGrid) ... ok
+test_cage_existence (__main__.TestCageConstraints) ... FAIL
+test_cages_1 (__main__.TestCageConstraints) ... ok
+test_cages_2 (__main__.TestCageConstraints) ... ok
+test_cages_3 (__main__.TestCageConstraints) ... ok
+test_cages_4 (__main__.TestCageConstraints) ... ok
+test_cages_5 (__main__.TestCageConstraints) ... ok
+test_cages_6 (__main__.TestCageConstraints) ... ok
+test_dh_1 (__main__.TestDH) ... test_bne_grid_1 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_2 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_3 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_4 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_5 (__main__.TestBinaryGrid) ... ok
+test_cage_existence (__main__.TestCageConstraints) ... FAIL
+test_cages_1 (__main__.TestCageConstraints) ... ok
+test_cages_2 (__main__.TestCageConstraints) ... ok
+test_cages_3 (__main__.TestCageConstraints) ... ok
+test_cages_4 (__main__.TestCageConstraints) ... ok
+test_cages_5 (__main__.TestCageConstraints) ... ok
+test_cages_6 (__main__.TestCageConstraints) ... ok
+test_dh_1 (__main__.TestDH) ... FAIL
+test_dh_2 (__main__.TestDH) ... FAIL
+test_dh_3 (__main__.TestDH) ... FAIL
+test_dh_4 (__main__.TestDH) ... FAIL
+test_mrv_1 (__main__.TestMRV) ... FAIL
+test_mrv_2 (__main__.TestMRV) ... FAIL
+test_mrv_3 (__main__.TestMRV) ... FAIL
+test_mrv_4 (__main__.TestMRV) ... FAIL
+test_nary_grid_1 (__main__.TestNaryGrid) ... ok
+test_nary_grid_2 (__main__.TestNaryGrid) ... ok
+test_nary_grid_3 (__main__.TestNaryGrid) ... ok
+test_nary_grid_4 (__main__.TestNaryGrid) ... ok
+test_bin_prop_fc_0 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_1 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_2 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_3 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_4 (__main__.TestPropFC) ... ok
+test_prop_fc_0 (__main__.TestPropFC) ... ok
+test_prop_fc_1 (__main__.TestPropFC) ... ok
+test_prop_fc_2 (__main__.TestPropFC) ... ok
+test_prop_fc_3 (__main__.TestPropFC) ... ok
+test_prop_fc_4 (__main__.TestPropFC) ... ok
+test_prop_GAC_0 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_1 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_2 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_3 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_4 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_5 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_6 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_7 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_8 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_9 (__main__.TestPropGAC) ... FAIL
+
+======================================================================
+FAIL: test_cage_existence (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+AssertionError: False is not true : failed to find cage variable
+
+======================================================================
+FAIL: test_dh_1 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_2 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_3 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_4 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_mrv_1 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_2 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_3 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_4 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_prop_GAC_0 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(3, [(3, [(1, 1), (2, 1)], '+'), (2, [(1, 2), (2, 2)], '-'), (6, [(1, 3), (2, 3), (3, 3)], '*'), (5, [(3, 1), (3, 2)], '+')])
+
+
+======================================================================
+FAIL: test_prop_GAC_1 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(6, [(1, 1), (2, 1)], '*'), (3, [(1, 2), (1, 3)], '+'), (3, [(1, 4), (2, 4)], '-'), (7, [(2, 2), (2, 3)], '+'), (2, [(3, 1), (3, 2)], '/'), (3, [(3, 3), (4, 3)], '-'), (6, [(3, 4), (4, 4)], '*'), (7, [(4, 1), (4, 2)], '+')])
+
+
+======================================================================
+FAIL: test_prop_GAC_2 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(16, [(1, 1), (1, 2), (2, 2)], '*'), (7, [(1, 3), (1, 4), (2, 3)], '+'), (4, [(2, 4)], '?'), (2, [(2, 1), (3, 1)], '-'), (2, [(3, 3), (3, 4)], '/'), (2, [(4, 3), (4, 4)], '/'), (12, [(3, 2), (4, 1), (4, 2)], '*')])
+
+
+======================================================================
+FAIL: test_prop_GAC_3 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(4, [(1, 1)], '?'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (2, 4)], '-'), (6, [(2, 1), (2, 2), (3, 2)], '+'), (12, [(2, 3), (3, 3), (3, 4)], '*'), (1, [(3, 1), (4, 1)], '-'), (5, [(4, 2), (4, 3)], '+'), (2, [(4, 4)], '?')])
+
+
+======================================================================
+FAIL: test_prop_GAC_4 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(2, [(1, 1), (1, 2)], '/'), (3, [(1, 3), (1, 4), (2, 3)], '*'), (8, [(2, 1), (2, 2), (3, 1)], '+'), (6, [(2, 4), (3, 4)], '*'), (2, [(3, 2), (3, 3)], '-'), (2, [(4, 1), (4, 2)], '-'), (2, [(4, 3), (4, 4)], '/')])
+
+
+======================================================================
+FAIL: test_prop_GAC_5 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(4, [(1, 1), (2, 1)], '-'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (2, 4)], '-'), (1, [(1, 5), (2, 5)], '-'), (9, [(2, 2), (2, 3)], '+'), (3, [(3, 1), (3, 2)], '-'), (6, [(3, 3), (3, 4), (4, 4)], '*'), (9, [(3, 5), (4, 5)], '+'), (7, [(4, 1), (5, 1)], '+'), (3, [(4, 2), (4, 3)], '-'), (6, [(5, 2), (5, 3)], '*'), (4, [(5, 4), (5, 5)], '-')])
+
+
+======================================================================
+FAIL: test_prop_GAC_6 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(10, [(1, 1), (1, 2), (2, 1), (2, 2)], '+'), (18, [(1, 3), (1, 4), (2, 3), (2, 4), (3, 4)], '+'), (2, [(1, 5), (2, 5), (3, 5)], '-'), (1, [(3, 1), (3, 2), (3, 3)], '-'), (600, [(4, 1), (4, 2), (4, 3), (5, 1), (5, 2), (5, 3)], '*'), (2, [(4, 4), (5, 4), (5, 5)], '/'), (3, [(4, 5)], '?')])
+
+
+======================================================================
+FAIL: test_prop_GAC_7 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(2, [(1, 1), (2, 1)], '-'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (1, 5)], '-'), (1, [(2, 2)], '?'), (2, [(2, 3), (2, 4)], '-'), (9, [(2, 5), (3, 5), (4, 5)], '+'), (6, [(3, 1), (3, 2)], '*'), (4, [(3, 3)], '?'), (3, [(3, 4), (4, 4)], '+'), (3, [(4, 1), (5, 1)], '-'), (15, [(4, 2), (4, 3)], '*'), (9, [(5, 2), (5, 3)], '+'), (1, [(5, 4), (5, 5)], '-')])
+
+
+======================================================================
+FAIL: test_prop_GAC_8 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(6, [(11, [(1, 1), (2, 1)], '+'), (2, [(1, 2), (1, 3)], '/'), (20, [(1, 4), (2, 4)], '*'), (6, [(1, 5), (1, 6), (2, 6), (3, 6)], '*'), (3, [(2, 2), (2, 3)], '-'), (3, [(2, 5), (3, 5)], '/'), (240, [(3, 1), (3, 2), (4, 1), (4, 2)], '*'), (6, [(3, 3), (3, 4)], '*'), (6, [(4, 3), (5, 3)], '*'), (7, [(4, 4), (5, 4), (5, 5)], '+'), (30, [(4, 5), (4, 6)], '*'), (6, [(5, 1), (5, 2)], '*'), (9, [(5, 6), (6, 6)], '+'), (8, [(6, 1), (6, 2), (6, 3)], '+'), (2, [(6, 4), (6, 5)], '/')])
+
+
+======================================================================
+FAIL: test_prop_GAC_9 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(6, [(2, [(1, 1), (1, 2), (1, 3)], '/'), (3, [(1, 4), (1, 5)], '-'), (11, [(1, 6), (2, 6), (3, 6)], '+'), (2, [(2, 1), (2, 2), (2, 3)], '/'), (40, [(2, 4), (2, 5), (3, 4), (3, 5)], '*'), (14, [(3, 1), (4, 1), (5, 1), (6, 1)], '+'), (3600, [(3, 2), (3, 3), (4, 2), (4, 3), (5, 2), (5, 3)], '*'), (120, [(4, 4), (5, 4), (6, 4)], '*'), (1, [(4, 5), (4, 6), (5, 5), (5, 6)], '-'), (5, [(6, 2), (6, 3)], '-'), (5, [(6, 5), (6, 6)], '+')])
+
+
+----------------------------------------------------------------------
+Ran 44 tests in 1.342s
+
+FAILED (failures=19)
+----------------------------------------------------------------------
+Time spent:
+
+test_bne_grid_1: 0.0002s
+test_bne_grid_2: 0.0002s
+test_bne_grid_3: 0.0010s
+test_bne_grid_4: 0.0031s
+test_bne_grid_5: 0.0077s
+test_cages_1: 0.0000s
+test_cages_2: 0.0001s
+test_cages_3: 0.0001s
+test_cages_4: 0.0004s
+test_cages_5: 0.0022s
+test_cages_6: 0.0002s
+test_nary_grid_1: 0.0001s
+test_nary_grid_2: 0.0004s
+test_nary_grid_3: 0.0030s
+test_nary_grid_4: 0.0227s
+test_bin_prop_fc_0: 0.0003s
+test_bin_prop_fc_1: 0.0012s
+test_bin_prop_fc_2: 0.0012s
+test_bin_prop_fc_3: 0.0012s
+test_bin_prop_fc_4: 0.0013s
+test_prop_fc_0: 0.0005s
+test_prop_fc_1: 0.2636s
+test_prop_fc_2: 0.5031s
+test_prop_fc_3: 0.0009s
+test_prop_fc_4: 0.4953s
+----------------------------------------------------------------------
+Grades:
+
+FC: 0.5/0.5
+GAC: 0.0/0.75
+MRV: 0.0/0.25
+DH: 0.0/0.25
+BINARY: 0.25/0.25
+NARY: 0.25/0.25
+CAGEY: 0.375/0.5
+
+TOTAL: 1.375/2.75
+Code quality: ?/0.25
+
+Running time: 2024_01_23-14:19:18
+
+===========================================
+test_bne_grid_1 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_2 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_3 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_4 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_5 (__main__.TestBinaryGrid) ... ok
+test_cage_existence (__main__.TestCageConstraints) ... FAIL
+test_cages_1 (__main__.TestCageConstraints) ... test_bne_grid_1 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_2 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_3 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_4 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_5 (__main__.TestBinaryGrid) ... ok
+test_cage_existence (__main__.TestCageConstraints) ... test_bne_grid_1 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_2 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_3 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_4 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_5 (__main__.TestBinaryGrid) ... ok
+test_cage_existence (__main__.TestCageConstraints) ... FAIL
+test_cages_1 (__main__.TestCageConstraints) ... ok
+test_cages_2 (__main__.TestCageConstraints) ... ok
+test_cages_3 (__main__.TestCageConstraints) ... ok
+test_cages_4 (__main__.TestCageConstraints) ... ok
+test_cages_5 (__main__.TestCageConstraints) ... ok
+test_cages_6 (__main__.TestCageConstraints) ... ok
+test_dh_1 (__main__.TestDH) ... FAIL
+test_dh_2 (__main__.TestDH) ... FAIL
+test_dh_3 (__main__.TestDH) ... FAIL
+test_dh_4 (__main__.TestDH) ... FAIL
+test_mrv_1 (__main__.TestMRV) ... FAIL
+test_mrv_2 (__main__.TestMRV) ... FAIL
+test_mrv_3 (__main__.TestMRV) ... FAIL
+test_mrv_4 (__main__.TestMRV) ... FAIL
+test_nary_grid_1 (__main__.TestNaryGrid) ... ok
+test_nary_grid_2 (__main__.TestNaryGrid) ... ok
+test_nary_grid_3 (__main__.TestNaryGrid) ... ok
+test_nary_grid_4 (__main__.TestNaryGrid) ... ok
+test_bin_prop_fc_0 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_1 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_2 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_3 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_4 (__main__.TestPropFC) ... ok
+test_prop_fc_0 (__main__.TestPropFC) ... ok
+test_prop_fc_1 (__main__.TestPropFC) ... ok
+test_prop_fc_2 (__main__.TestPropFC) ... ok
+test_prop_fc_3 (__main__.TestPropFC) ... ok
+test_prop_fc_4 (__main__.TestPropFC) ... ok
+test_prop_GAC_0 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_1 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_2 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_3 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_4 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_5 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_6 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_7 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_8 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_9 (__main__.TestPropGAC) ... FAIL
+
+======================================================================
+FAIL: test_cage_existence (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+AssertionError: False is not true : failed to find cage variable
+
+======================================================================
+FAIL: test_dh_1 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_2 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_3 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_4 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_mrv_1 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_2 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_3 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_4 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_prop_GAC_0 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(3, [(3, [(1, 1), (2, 1)], '+'), (2, [(1, 2), (2, 2)], '-'), (6, [(1, 3), (2, 3), (3, 3)], '*'), (5, [(3, 1), (3, 2)], '+')])
+
+
+======================================================================
+FAIL: test_prop_GAC_1 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(6, [(1, 1), (2, 1)], '*'), (3, [(1, 2), (1, 3)], '+'), (3, [(1, 4), (2, 4)], '-'), (7, [(2, 2), (2, 3)], '+'), (2, [(3, 1), (3, 2)], '/'), (3, [(3, 3), (4, 3)], '-'), (6, [(3, 4), (4, 4)], '*'), (7, [(4, 1), (4, 2)], '+')])
+
+
+======================================================================
+FAIL: test_prop_GAC_2 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(16, [(1, 1), (1, 2), (2, 2)], '*'), (7, [(1, 3), (1, 4), (2, 3)], '+'), (4, [(2, 4)], '?'), (2, [(2, 1), (3, 1)], '-'), (2, [(3, 3), (3, 4)], '/'), (2, [(4, 3), (4, 4)], '/'), (12, [(3, 2), (4, 1), (4, 2)], '*')])
+
+
+======================================================================
+FAIL: test_prop_GAC_3 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(4, [(1, 1)], '?'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (2, 4)], '-'), (6, [(2, 1), (2, 2), (3, 2)], '+'), (12, [(2, 3), (3, 3), (3, 4)], '*'), (1, [(3, 1), (4, 1)], '-'), (5, [(4, 2), (4, 3)], '+'), (2, [(4, 4)], '?')])
+
+
+======================================================================
+FAIL: test_prop_GAC_4 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(2, [(1, 1), (1, 2)], '/'), (3, [(1, 3), (1, 4), (2, 3)], '*'), (8, [(2, 1), (2, 2), (3, 1)], '+'), (6, [(2, 4), (3, 4)], '*'), (2, [(3, 2), (3, 3)], '-'), (2, [(4, 1), (4, 2)], '-'), (2, [(4, 3), (4, 4)], '/')])
+
+
+======================================================================
+FAIL: test_prop_GAC_5 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(4, [(1, 1), (2, 1)], '-'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (2, 4)], '-'), (1, [(1, 5), (2, 5)], '-'), (9, [(2, 2), (2, 3)], '+'), (3, [(3, 1), (3, 2)], '-'), (6, [(3, 3), (3, 4), (4, 4)], '*'), (9, [(3, 5), (4, 5)], '+'), (7, [(4, 1), (5, 1)], '+'), (3, [(4, 2), (4, 3)], '-'), (6, [(5, 2), (5, 3)], '*'), (4, [(5, 4), (5, 5)], '-')])
+
+
+======================================================================
+FAIL: test_prop_GAC_6 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(10, [(1, 1), (1, 2), (2, 1), (2, 2)], '+'), (18, [(1, 3), (1, 4), (2, 3), (2, 4), (3, 4)], '+'), (2, [(1, 5), (2, 5), (3, 5)], '-'), (1, [(3, 1), (3, 2), (3, 3)], '-'), (600, [(4, 1), (4, 2), (4, 3), (5, 1), (5, 2), (5, 3)], '*'), (2, [(4, 4), (5, 4), (5, 5)], '/'), (3, [(4, 5)], '?')])
+
+
+======================================================================
+FAIL: test_prop_GAC_7 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(2, [(1, 1), (2, 1)], '-'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (1, 5)], '-'), (1, [(2, 2)], '?'), (2, [(2, 3), (2, 4)], '-'), (9, [(2, 5), (3, 5), (4, 5)], '+'), (6, [(3, 1), (3, 2)], '*'), (4, [(3, 3)], '?'), (3, [(3, 4), (4, 4)], '+'), (3, [(4, 1), (5, 1)], '-'), (15, [(4, 2), (4, 3)], '*'), (9, [(5, 2), (5, 3)], '+'), (1, [(5, 4), (5, 5)], '-')])
+
+
+======================================================================
+FAIL: test_prop_GAC_8 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(6, [(11, [(1, 1), (2, 1)], '+'), (2, [(1, 2), (1, 3)], '/'), (20, [(1, 4), (2, 4)], '*'), (6, [(1, 5), (1, 6), (2, 6), (3, 6)], '*'), (3, [(2, 2), (2, 3)], '-'), (3, [(2, 5), (3, 5)], '/'), (240, [(3, 1), (3, 2), (4, 1), (4, 2)], '*'), (6, [(3, 3), (3, 4)], '*'), (6, [(4, 3), (5, 3)], '*'), (7, [(4, 4), (5, 4), (5, 5)], '+'), (30, [(4, 5), (4, 6)], '*'), (6, [(5, 1), (5, 2)], '*'), (9, [(5, 6), (6, 6)], '+'), (8, [(6, 1), (6, 2), (6, 3)], '+'), (2, [(6, 4), (6, 5)], '/')])
+
+
+======================================================================
+FAIL: test_prop_GAC_9 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(6, [(2, [(1, 1), (1, 2), (1, 3)], '/'), (3, [(1, 4), (1, 5)], '-'), (11, [(1, 6), (2, 6), (3, 6)], '+'), (2, [(2, 1), (2, 2), (2, 3)], '/'), (40, [(2, 4), (2, 5), (3, 4), (3, 5)], '*'), (14, [(3, 1), (4, 1), (5, 1), (6, 1)], '+'), (3600, [(3, 2), (3, 3), (4, 2), (4, 3), (5, 2), (5, 3)], '*'), (120, [(4, 4), (5, 4), (6, 4)], '*'), (1, [(4, 5), (4, 6), (5, 5), (5, 6)], '-'), (5, [(6, 2), (6, 3)], '-'), (5, [(6, 5), (6, 6)], '+')])
+
+
+----------------------------------------------------------------------
+Ran 44 tests in 1.352s
+
+FAILED (failures=19)
+----------------------------------------------------------------------
+Time spent:
+
+test_bne_grid_1: 0.0002s
+test_bne_grid_2: 0.0002s
+test_bne_grid_3: 0.0010s
+test_bne_grid_4: 0.0032s
+test_bne_grid_5: 0.0081s
+test_cages_1: 0.0000s
+test_cages_2: 0.0001s
+test_cages_3: 0.0001s
+test_cages_4: 0.0004s
+test_cages_5: 0.0021s
+test_cages_6: 0.0002s
+test_nary_grid_1: 0.0001s
+test_nary_grid_2: 0.0004s
+test_nary_grid_3: 0.0031s
+test_nary_grid_4: 0.0239s
+test_bin_prop_fc_0: 0.0003s
+test_bin_prop_fc_1: 0.0012s
+test_bin_prop_fc_2: 0.0012s
+test_bin_prop_fc_3: 0.0012s
+test_bin_prop_fc_4: 0.0012s
+test_prop_fc_0: 0.0005s
+test_prop_fc_1: 0.2648s
+test_prop_fc_2: 0.5068s
+test_prop_fc_3: 0.0007s
+test_prop_fc_4: 0.4975s
+----------------------------------------------------------------------
+Grades:
+
+FC: 0.5/0.5
+GAC: 0.0/0.75
+MRV: 0.0/0.25
+DH: 0.0/0.25
+BINARY: 0.25/0.25
+NARY: 0.25/0.25
+CAGEY: 0.375/0.5
+
+TOTAL: 1.375/2.75
+Code quality: ?/0.25
+
+Running time: 2024_01_23-14:21:47
+
+===========================================
+test_bne_grid_1 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_2 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_3 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_4 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_5 (__main__.TestBinaryGrid) ... ok
+test_cage_existence (__main__.TestCageConstraints) ... test_bne_grid_1 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_2 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_3 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_4 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_5 (__main__.TestBinaryGrid) ... ok
+test_cage_existence (__main__.TestCageConstraints) ... test_bne_grid_1 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_2 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_3 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_4 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_5 (__main__.TestBinaryGrid) ... ok
+test_cage_existence (__main__.TestCageConstraints) ... ERROR
+test_cages_1 (__main__.TestCageConstraints) ... FAIL
+test_cages_2 (__main__.TestCageConstraints) ... FAIL
+test_cages_3 (__main__.TestCageConstraints) ... FAIL
+test_cages_4 (__main__.TestCageConstraints) ... FAIL
+test_cages_5 (__main__.TestCageConstraints) ... FAIL
+test_cages_6 (__main__.TestCageConstraints) ... FAIL
+test_dh_1 (__main__.TestDH) ... FAIL
+test_dh_2 (__main__.TestDH) ... FAIL
+test_dh_3 (__main__.TestDH) ... FAIL
+test_dh_4 (__main__.TestDH) ... FAIL
+test_mrv_1 (__main__.TestMRV) ... FAIL
+test_mrv_2 (__main__.TestMRV) ... FAIL
+test_mrv_3 (__main__.TestMRV) ... FAIL
+test_mrv_4 (__main__.TestMRV) ... FAIL
+test_nary_grid_1 (__main__.TestNaryGrid) ... ok
+test_nary_grid_2 (__main__.TestNaryGrid) ... ok
+test_nary_grid_3 (__main__.TestNaryGrid) ... ok
+test_nary_grid_4 (__main__.TestNaryGrid) ... ok
+test_bin_prop_fc_0 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_1 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_2 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_3 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_4 (__main__.TestPropFC) ... ok
+test_prop_fc_0 (__main__.TestPropFC) ... ok
+test_prop_fc_1 (__main__.TestPropFC) ... ok
+test_prop_fc_2 (__main__.TestPropFC) ... ok
+test_prop_fc_3 (__main__.TestPropFC) ... ok
+test_prop_fc_4 (__main__.TestPropFC) ... ok
+test_prop_GAC_0 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_1 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_2 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_3 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_4 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_5 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_6 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_7 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_8 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_9 (__main__.TestPropGAC) ... FAIL
+
+======================================================================
+ERROR: test_cage_existence (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/benjaminfalkner/Documents/GitHub/324-A1-CSP-/a1-3/autograder_stu.py", line 616, in test_cage_existence
+    csp, var_array = cagey_csp_model(board)
+  File "/Users/benjaminfalkner/Documents/GitHub/324-A1-CSP-/a1-3/cagey_csp.py", line 195, in cagey_csp_model
+    vars_flat = [var for sublist in csp.get_all_vars() for var in sublist]
+  File "/Users/benjaminfalkner/Documents/GitHub/324-A1-CSP-/a1-3/cagey_csp.py", line 195, in <listcomp>
+    vars_flat = [var for sublist in csp.get_all_vars() for var in sublist]
+TypeError: 'Variable' object is not iterable
+
+======================================================================
+FAIL: test_cages_1 (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "'Variable' object is not iterable". Failed to construct board!
+(2, [(4, [(1, 1), (1, 2), (2, 1), (2, 2)], '+')])
+
+
+======================================================================
+FAIL: test_cages_2 (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "'Variable' object is not iterable". Failed to construct board!
+(2, [(4, [(1, 1), (1, 2), (2, 1), (2, 2)], '-')])
+
+
+======================================================================
+FAIL: test_cages_3 (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "'Variable' object is not iterable". Failed to construct board!
+(2, [(4, [(1, 1), (1, 2), (2, 1), (2, 2)], '*')])
+
+
+======================================================================
+FAIL: test_cages_4 (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "'Variable' object is not iterable". Failed to construct board!
+(3, [(10, [(1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3)], '+')])
+
+
+======================================================================
+FAIL: test_cages_5 (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "'Variable' object is not iterable". Failed to construct board!
+(3, [(7, [(1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3)], '-')])
+
+
+======================================================================
+FAIL: test_cages_6 (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "'Variable' object is not iterable". Failed to construct board!
+(3, [(10, [(1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3)], '*')])
+
+
+======================================================================
+FAIL: test_dh_1 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_2 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_3 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_4 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_mrv_1 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_2 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_3 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_4 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_prop_GAC_0 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(3, [(3, [(1, 1), (2, 1)], '+'), (2, [(1, 2), (2, 2)], '-'), (6, [(1, 3), (2, 3), (3, 3)], '*'), (5, [(3, 1), (3, 2)], '+')])
+
+
+======================================================================
+FAIL: test_prop_GAC_1 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(6, [(1, 1), (2, 1)], '*'), (3, [(1, 2), (1, 3)], '+'), (3, [(1, 4), (2, 4)], '-'), (7, [(2, 2), (2, 3)], '+'), (2, [(3, 1), (3, 2)], '/'), (3, [(3, 3), (4, 3)], '-'), (6, [(3, 4), (4, 4)], '*'), (7, [(4, 1), (4, 2)], '+')])
+
+
+======================================================================
+FAIL: test_prop_GAC_2 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(16, [(1, 1), (1, 2), (2, 2)], '*'), (7, [(1, 3), (1, 4), (2, 3)], '+'), (4, [(2, 4)], '?'), (2, [(2, 1), (3, 1)], '-'), (2, [(3, 3), (3, 4)], '/'), (2, [(4, 3), (4, 4)], '/'), (12, [(3, 2), (4, 1), (4, 2)], '*')])
+
+
+======================================================================
+FAIL: test_prop_GAC_3 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(4, [(1, 1)], '?'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (2, 4)], '-'), (6, [(2, 1), (2, 2), (3, 2)], '+'), (12, [(2, 3), (3, 3), (3, 4)], '*'), (1, [(3, 1), (4, 1)], '-'), (5, [(4, 2), (4, 3)], '+'), (2, [(4, 4)], '?')])
+
+
+======================================================================
+FAIL: test_prop_GAC_4 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(2, [(1, 1), (1, 2)], '/'), (3, [(1, 3), (1, 4), (2, 3)], '*'), (8, [(2, 1), (2, 2), (3, 1)], '+'), (6, [(2, 4), (3, 4)], '*'), (2, [(3, 2), (3, 3)], '-'), (2, [(4, 1), (4, 2)], '-'), (2, [(4, 3), (4, 4)], '/')])
+
+
+======================================================================
+FAIL: test_prop_GAC_5 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(4, [(1, 1), (2, 1)], '-'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (2, 4)], '-'), (1, [(1, 5), (2, 5)], '-'), (9, [(2, 2), (2, 3)], '+'), (3, [(3, 1), (3, 2)], '-'), (6, [(3, 3), (3, 4), (4, 4)], '*'), (9, [(3, 5), (4, 5)], '+'), (7, [(4, 1), (5, 1)], '+'), (3, [(4, 2), (4, 3)], '-'), (6, [(5, 2), (5, 3)], '*'), (4, [(5, 4), (5, 5)], '-')])
+
+
+======================================================================
+FAIL: test_prop_GAC_6 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(10, [(1, 1), (1, 2), (2, 1), (2, 2)], '+'), (18, [(1, 3), (1, 4), (2, 3), (2, 4), (3, 4)], '+'), (2, [(1, 5), (2, 5), (3, 5)], '-'), (1, [(3, 1), (3, 2), (3, 3)], '-'), (600, [(4, 1), (4, 2), (4, 3), (5, 1), (5, 2), (5, 3)], '*'), (2, [(4, 4), (5, 4), (5, 5)], '/'), (3, [(4, 5)], '?')])
+
+
+======================================================================
+FAIL: test_prop_GAC_7 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(2, [(1, 1), (2, 1)], '-'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (1, 5)], '-'), (1, [(2, 2)], '?'), (2, [(2, 3), (2, 4)], '-'), (9, [(2, 5), (3, 5), (4, 5)], '+'), (6, [(3, 1), (3, 2)], '*'), (4, [(3, 3)], '?'), (3, [(3, 4), (4, 4)], '+'), (3, [(4, 1), (5, 1)], '-'), (15, [(4, 2), (4, 3)], '*'), (9, [(5, 2), (5, 3)], '+'), (1, [(5, 4), (5, 5)], '-')])
+
+
+======================================================================
+FAIL: test_prop_GAC_8 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(6, [(11, [(1, 1), (2, 1)], '+'), (2, [(1, 2), (1, 3)], '/'), (20, [(1, 4), (2, 4)], '*'), (6, [(1, 5), (1, 6), (2, 6), (3, 6)], '*'), (3, [(2, 2), (2, 3)], '-'), (3, [(2, 5), (3, 5)], '/'), (240, [(3, 1), (3, 2), (4, 1), (4, 2)], '*'), (6, [(3, 3), (3, 4)], '*'), (6, [(4, 3), (5, 3)], '*'), (7, [(4, 4), (5, 4), (5, 5)], '+'), (30, [(4, 5), (4, 6)], '*'), (6, [(5, 1), (5, 2)], '*'), (9, [(5, 6), (6, 6)], '+'), (8, [(6, 1), (6, 2), (6, 3)], '+'), (2, [(6, 4), (6, 5)], '/')])
+
+
+======================================================================
+FAIL: test_prop_GAC_9 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(6, [(2, [(1, 1), (1, 2), (1, 3)], '/'), (3, [(1, 4), (1, 5)], '-'), (11, [(1, 6), (2, 6), (3, 6)], '+'), (2, [(2, 1), (2, 2), (2, 3)], '/'), (40, [(2, 4), (2, 5), (3, 4), (3, 5)], '*'), (14, [(3, 1), (4, 1), (5, 1), (6, 1)], '+'), (3600, [(3, 2), (3, 3), (4, 2), (4, 3), (5, 2), (5, 3)], '*'), (120, [(4, 4), (5, 4), (6, 4)], '*'), (1, [(4, 5), (4, 6), (5, 5), (5, 6)], '-'), (5, [(6, 2), (6, 3)], '-'), (5, [(6, 5), (6, 6)], '+')])
+
+
+----------------------------------------------------------------------
+Ran 44 tests in 1.345s
+
+FAILED (failures=24, errors=1)
+----------------------------------------------------------------------
+Time spent:
+
+test_bne_grid_1: 0.0002s
+test_bne_grid_2: 0.0002s
+test_bne_grid_3: 0.0009s
+test_bne_grid_4: 0.0032s
+test_bne_grid_5: 0.0078s
+test_nary_grid_1: 0.0001s
+test_nary_grid_2: 0.0004s
+test_nary_grid_3: 0.0028s
+test_nary_grid_4: 0.0231s
+test_bin_prop_fc_0: 0.0003s
+test_bin_prop_fc_1: 0.0015s
+test_bin_prop_fc_2: 0.0012s
+test_bin_prop_fc_3: 0.0012s
+test_bin_prop_fc_4: 0.0012s
+test_prop_fc_0: 0.0005s
+test_prop_fc_1: 0.2670s
+test_prop_fc_2: 0.4988s
+test_prop_fc_3: 0.0007s
+test_prop_fc_4: 0.4980s
+----------------------------------------------------------------------
+Grades:
+
+FC: 0.5/0.5
+GAC: 0.0/0.75
+MRV: 0.0/0.25
+DH: 0.0/0.25
+BINARY: 0.25/0.25
+NARY: 0.25/0.25
+CAGEY: 0.0/0.5
+
+TOTAL: 1.0/2.75
+Code quality: ?/0.25
+
+Running time: 2024_01_23-14:24:47
+
+===========================================
+test_bne_grid_1 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_2 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_3 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_4 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_5 (__main__.TestBinaryGrid) ... ok
+test_cage_existence (__main__.TestCageConstraints) ... ERROR
+test_cages_1 (__main__.TestCageConstraints) ... FAIL
+test_cages_2 (__main__.TestCageConstraints) ... FAIL
+test_cages_3 (__main__.TestCageConstraints) ... FAIL
+test_cages_4 (__main__.TestCageConstraints) ... FAIL
+test_cages_5 (__main__.TestCageConstraints) ... FAIL
+test_cages_6 (__main__.TestCageConstraints) ... FAIL
+test_dh_1 (__main__.TestDH) ... FAIL
+test_dh_2 (__main__.TestDH) ... FAIL
+test_dh_3 (__main__.TestDH) ... FAIL
+test_dh_4 (__main__.TestDH) ... FAIL
+test_mrv_1 (__main__.TestMRV) ... FAIL
+test_mrv_2 (__main__.TestMRV) ... FAIL
+test_mrv_3 (__main__.TestMRV) ... FAIL
+test_mrv_4 (__main__.TestMRV) ... FAIL
+test_nary_grid_1 (__main__.TestNaryGrid) ... ok
+test_nary_grid_2 (__main__.TestNaryGrid) ... ok
+test_nary_grid_3 (__main__.TestNaryGrid) ... ok
+test_nary_grid_4 (__main__.TestNaryGrid) ... ok
+test_bin_prop_fc_0 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_1 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_2 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_3 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_4 (__main__.TestPropFC) ... ok
+test_prop_fc_0 (__main__.TestPropFC) ... ok
+test_prop_fc_1 (__main__.TestPropFC) ... ok
+test_prop_fc_2 (__main__.TestPropFC) ... ok
+test_prop_fc_3 (__main__.TestPropFC) ... ok
+test_prop_fc_4 (__main__.TestPropFC) ... ok
+test_prop_GAC_0 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_1 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_2 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_3 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_4 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_5 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_6 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_7 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_8 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_9 (__main__.TestPropGAC) ... FAIL
+
+======================================================================
+ERROR: test_cage_existence (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/benjaminfalkner/Documents/GitHub/324-A1-CSP-/a1-3/autograder_stu.py", line 616, in test_cage_existence
+    csp, var_array = cagey_csp_model(board)
+  File "/Users/benjaminfalkner/Documents/GitHub/324-A1-CSP-/a1-3/cagey_csp.py", line 196, in cagey_csp_model
+    vars_flat = [var for sublist in vars for var in sublist]
+  File "/Users/benjaminfalkner/Documents/GitHub/324-A1-CSP-/a1-3/cagey_csp.py", line 196, in <listcomp>
+    vars_flat = [var for sublist in vars for var in sublist]
+TypeError: 'Variable' object is not iterable
+
+======================================================================
+FAIL: test_cages_1 (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "'Variable' object is not iterable". Failed to construct board!
+(2, [(4, [(1, 1), (1, 2), (2, 1), (2, 2)], '+')])
+
+
+======================================================================
+FAIL: test_cages_2 (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "'Variable' object is not iterable". Failed to construct board!
+(2, [(4, [(1, 1), (1, 2), (2, 1), (2, 2)], '-')])
+
+
+======================================================================
+FAIL: test_cages_3 (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "'Variable' object is not iterable". Failed to construct board!
+(2, [(4, [(1, 1), (1, 2), (2, 1), (2, 2)], '*')])
+
+
+======================================================================
+FAIL: test_cages_4 (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "'Variable' object is not iterable". Failed to construct board!
+(3, [(10, [(1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3)], '+')])
+
+
+======================================================================
+FAIL: test_cages_5 (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "'Variable' object is not iterable". Failed to construct board!
+(3, [(7, [(1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3)], '-')])
+
+
+======================================================================
+FAIL: test_cages_6 (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "'Variable' object is not iterable". Failed to construct board!
+(3, [(10, [(1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3)], '*')])
+
+
+======================================================================
+FAIL: test_dh_1 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_2 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_3 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_4 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_mrv_1 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_2 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_3 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_4 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_prop_GAC_0 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(3, [(3, [(1, 1), (2, 1)], '+'), (2, [(1, 2), (2, 2)], '-'), (6, [(1, 3), (2, 3), (3, 3)], '*'), (5, [(3, 1), (3, 2)], '+')])
+
+
+======================================================================
+FAIL: test_prop_GAC_1 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(6, [(1, 1), (2, 1)], '*'), (3, [(1, 2), (1, 3)], '+'), (3, [(1, 4), (2, 4)], '-'), (7, [(2, 2), (2, 3)], '+'), (2, [(3, 1), (3, 2)], '/'), (3, [(3, 3), (4, 3)], '-'), (6, [(3, 4), (4, 4)], '*'), (7, [(4, 1), (4, 2)], '+')])
+
+
+======================================================================
+FAIL: test_prop_GAC_2 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(16, [(1, 1), (1, 2), (2, 2)], '*'), (7, [(1, 3), (1, 4), (2, 3)], '+'), (4, [(2, 4)], '?'), (2, [(2, 1), (3, 1)], '-'), (2, [(3, 3), (3, 4)], '/'), (2, [(4, 3), (4, 4)], '/'), (12, [(3, 2), (4, 1), (4, 2)], '*')])
+
+
+======================================================================
+FAIL: test_prop_GAC_3 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(4, [(1, 1)], '?'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (2, 4)], '-'), (6, [(2, 1), (2, 2), (3, 2)], '+'), (12, [(2, 3), (3, 3), (3, 4)], '*'), (1, [(3, 1), (4, 1)], '-'), (5, [(4, 2), (4, 3)], '+'), (2, [(4, 4)], '?')])
+
+
+======================================================================
+FAIL: test_prop_GAC_4 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(2, [(1, 1), (1, 2)], '/'), (3, [(1, 3), (1, 4), (2, 3)], '*'), (8, [(2, 1), (2, 2), (3, 1)], '+'), (6, [(2, 4), (3, 4)], '*'), (2, [(3, 2), (3, 3)], '-'), (2, [(4, 1), (4, 2)], '-'), (2, [(4, 3), (4, 4)], '/')])
+
+
+======================================================================
+FAIL: test_prop_GAC_5 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(4, [(1, 1), (2, 1)], '-'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (2, 4)], '-'), (1, [(1, 5), (2, 5)], '-'), (9, [(2, 2), (2, 3)], '+'), (3, [(3, 1), (3, 2)], '-'), (6, [(3, 3), (3, 4), (4, 4)], '*'), (9, [(3, 5), (4, 5)], '+'), (7, [(4, 1), (5, 1)], '+'), (3, [(4, 2), (4, 3)], '-'), (6, [(5, 2), (5, 3)], '*'), (4, [(5, 4), (5, 5)], '-')])
+
+
+======================================================================
+FAIL: test_prop_GAC_6 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(10, [(1, 1), (1, 2), (2, 1), (2, 2)], '+'), (18, [(1, 3), (1, 4), (2, 3), (2, 4), (3, 4)], '+'), (2, [(1, 5), (2, 5), (3, 5)], '-'), (1, [(3, 1), (3, 2), (3, 3)], '-'), (600, [(4, 1), (4, 2), (4, 3), (5, 1), (5, 2), (5, 3)], '*'), (2, [(4, 4), (5, 4), (5, 5)], '/'), (3, [(4, 5)], '?')])
+
+
+======================================================================
+FAIL: test_prop_GAC_7 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(2, [(1, 1), (2, 1)], '-'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (1, 5)], '-'), (1, [(2, 2)], '?'), (2, [(2, 3), (2, 4)], '-'), (9, [(2, 5), (3, 5), (4, 5)], '+'), (6, [(3, 1), (3, 2)], '*'), (4, [(3, 3)], '?'), (3, [(3, 4), (4, 4)], '+'), (3, [(4, 1), (5, 1)], '-'), (15, [(4, 2), (4, 3)], '*'), (9, [(5, 2), (5, 3)], '+'), (1, [(5, 4), (5, 5)], '-')])
+
+
+======================================================================
+FAIL: test_prop_GAC_8 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(6, [(11, [(1, 1), (2, 1)], '+'), (2, [(1, 2), (1, 3)], '/'), (20, [(1, 4), (2, 4)], '*'), (6, [(1, 5), (1, 6), (2, 6), (3, 6)], '*'), (3, [(2, 2), (2, 3)], '-'), (3, [(2, 5), (3, 5)], '/'), (240, [(3, 1), (3, 2), (4, 1), (4, 2)], '*'), (6, [(3, 3), (3, 4)], '*'), (6, [(4, 3), (5, 3)], '*'), (7, [(4, 4), (5, 4), (5, 5)], '+'), (30, [(4, 5), (4, 6)], '*'), (6, [(5, 1), (5, 2)], '*'), (9, [(5, 6), (6, 6)], '+'), (8, [(6, 1), (6, 2), (6, 3)], '+'), (2, [(6, 4), (6, 5)], '/')])
+
+
+======================================================================
+FAIL: test_prop_GAC_9 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(6, [(2, [(1, 1), (1, 2), (1, 3)], '/'), (3, [(1, 4), (1, 5)], '-'), (11, [(1, 6), (2, 6), (3, 6)], '+'), (2, [(2, 1), (2, 2), (2, 3)], '/'), (40, [(2, 4), (2, 5), (3, 4), (3, 5)], '*'), (14, [(3, 1), (4, 1), (5, 1), (6, 1)], '+'), (3600, [(3, 2), (3, 3), (4, 2), (4, 3), (5, 2), (5, 3)], '*'), (120, [(4, 4), (5, 4), (6, 4)], '*'), (1, [(4, 5), (4, 6), (5, 5), (5, 6)], '-'), (5, [(6, 2), (6, 3)], '-'), (5, [(6, 5), (6, 6)], '+')])
+
+
+----------------------------------------------------------------------
+Ran 44 tests in 1.341s
+
+FAILED (failures=24, errors=1)
+----------------------------------------------------------------------
+Time spent:
+
+test_bne_grid_1: 0.0002s
+test_bne_grid_2: 0.0002s
+test_bne_grid_3: 0.0009s
+test_bne_grid_4: 0.0031s
+test_bne_grid_5: 0.0079s
+test_nary_grid_1: 0.0001s
+test_nary_grid_2: 0.0004s
+test_nary_grid_3: 0.0027s
+test_nary_grid_4: 0.0227s
+test_bin_prop_fc_0: 0.0004s
+test_bin_prop_fc_1: 0.0014s
+test_bin_prop_fc_2: 0.0012s
+test_bin_prop_fc_3: 0.0012s
+test_bin_prop_fc_4: 0.0012s
+test_prop_fc_0: 0.0005s
+test_prop_fc_1: 0.2668s
+test_prop_fc_2: 0.5021s
+test_prop_fc_3: 0.0007s
+test_prop_fc_4: 0.4856s
+----------------------------------------------------------------------
+Grades:
+
+FC: 0.5/0.5
+GAC: 0.0/0.75
+MRV: 0.0/0.25
+DH: 0.0/0.25
+BINARY: 0.25/0.25
+NARY: 0.25/0.25
+CAGEY: 0.0/0.5
+
+TOTAL: 1.0/2.75
+Code quality: ?/0.25
+
+Running time: 2024_01_23-14:25:42
+
+===========================================
+test_bne_grid_1 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_2 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_3 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_4 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_5 (__main__.TestBinaryGrid) ... ok
+test_cage_existence (__main__.TestCageConstraints) ... FAIL
+test_cages_1 (__main__.TestCageConstraints) ... ok
+test_cages_2 (__main__.TestCageConstraints) ... ok
+test_cages_3 (__main__.TestCageConstraints) ... ok
+test_cages_4 (__main__.TestCageConstraints) ... ok
+test_cages_5 (__main__.TestCageConstraints) ... ok
+test_cages_6 (__main__.TestCageConstraints) ... ok
+test_dh_1 (__main__.TestDH) ... FAIL
+test_dh_2 (__main__.TestDH) ... FAIL
+test_dh_3 (__main__.TestDH) ... FAIL
+test_dh_4 (__main__.TestDH) ... FAIL
+test_mrv_1 (__main__.TestMRV) ... FAIL
+test_mrv_2 (__main__.TestMRV) ... FAIL
+test_mrv_3 (__main__.TestMRV) ... FAIL
+test_mrv_4 (__main__.TestMRV) ... FAIL
+test_nary_grid_1 (__main__.TestNaryGrid) ... ok
+test_nary_grid_2 (__main__.TestNaryGrid) ... ok
+test_nary_grid_3 (__main__.TestNaryGrid) ... ok
+test_nary_grid_4 (__main__.TestNaryGrid) ... ok
+test_bin_prop_fc_0 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_1 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_2 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_3 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_4 (__main__.TestPropFC) ... ok
+test_prop_fc_0 (__main__.TestPropFC) ... ok
+test_prop_fc_1 (__main__.TestPropFC) ... ok
+test_prop_fc_2 (__main__.TestPropFC) ... ok
+test_prop_fc_3 (__main__.TestPropFC) ... ok
+test_prop_fc_4 (__main__.TestPropFC) ... ok
+test_prop_GAC_0 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_1 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_2 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_3 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_4 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_5 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_6 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_7 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_8 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_9 (__main__.TestPropGAC) ... FAIL
+
+======================================================================
+FAIL: test_cage_existence (__main__.TestCageConstraints)
+----------------------------------------------------------------------
+AssertionError: False is not true : failed to find cage variable
+
+======================================================================
+FAIL: test_dh_1 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_2 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_3 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_4 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_mrv_1 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_2 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_3 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_4 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_prop_GAC_0 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(3, [(3, [(1, 1), (2, 1)], '+'), (2, [(1, 2), (2, 2)], '-'), (6, [(1, 3), (2, 3), (3, 3)], '*'), (5, [(3, 1), (3, 2)], '+')])
+
+
+======================================================================
+FAIL: test_prop_GAC_1 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(6, [(1, 1), (2, 1)], '*'), (3, [(1, 2), (1, 3)], '+'), (3, [(1, 4), (2, 4)], '-'), (7, [(2, 2), (2, 3)], '+'), (2, [(3, 1), (3, 2)], '/'), (3, [(3, 3), (4, 3)], '-'), (6, [(3, 4), (4, 4)], '*'), (7, [(4, 1), (4, 2)], '+')])
+
+
+======================================================================
+FAIL: test_prop_GAC_2 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(16, [(1, 1), (1, 2), (2, 2)], '*'), (7, [(1, 3), (1, 4), (2, 3)], '+'), (4, [(2, 4)], '?'), (2, [(2, 1), (3, 1)], '-'), (2, [(3, 3), (3, 4)], '/'), (2, [(4, 3), (4, 4)], '/'), (12, [(3, 2), (4, 1), (4, 2)], '*')])
+
+
+======================================================================
+FAIL: test_prop_GAC_3 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(4, [(1, 1)], '?'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (2, 4)], '-'), (6, [(2, 1), (2, 2), (3, 2)], '+'), (12, [(2, 3), (3, 3), (3, 4)], '*'), (1, [(3, 1), (4, 1)], '-'), (5, [(4, 2), (4, 3)], '+'), (2, [(4, 4)], '?')])
+
+
+======================================================================
+FAIL: test_prop_GAC_4 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(2, [(1, 1), (1, 2)], '/'), (3, [(1, 3), (1, 4), (2, 3)], '*'), (8, [(2, 1), (2, 2), (3, 1)], '+'), (6, [(2, 4), (3, 4)], '*'), (2, [(3, 2), (3, 3)], '-'), (2, [(4, 1), (4, 2)], '-'), (2, [(4, 3), (4, 4)], '/')])
+
+
+======================================================================
+FAIL: test_prop_GAC_5 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(4, [(1, 1), (2, 1)], '-'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (2, 4)], '-'), (1, [(1, 5), (2, 5)], '-'), (9, [(2, 2), (2, 3)], '+'), (3, [(3, 1), (3, 2)], '-'), (6, [(3, 3), (3, 4), (4, 4)], '*'), (9, [(3, 5), (4, 5)], '+'), (7, [(4, 1), (5, 1)], '+'), (3, [(4, 2), (4, 3)], '-'), (6, [(5, 2), (5, 3)], '*'), (4, [(5, 4), (5, 5)], '-')])
+
+
+======================================================================
+FAIL: test_prop_GAC_6 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(10, [(1, 1), (1, 2), (2, 1), (2, 2)], '+'), (18, [(1, 3), (1, 4), (2, 3), (2, 4), (3, 4)], '+'), (2, [(1, 5), (2, 5), (3, 5)], '-'), (1, [(3, 1), (3, 2), (3, 3)], '-'), (600, [(4, 1), (4, 2), (4, 3), (5, 1), (5, 2), (5, 3)], '*'), (2, [(4, 4), (5, 4), (5, 5)], '/'), (3, [(4, 5)], '?')])
+
+
+======================================================================
+FAIL: test_prop_GAC_7 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(2, [(1, 1), (2, 1)], '-'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (1, 5)], '-'), (1, [(2, 2)], '?'), (2, [(2, 3), (2, 4)], '-'), (9, [(2, 5), (3, 5), (4, 5)], '+'), (6, [(3, 1), (3, 2)], '*'), (4, [(3, 3)], '?'), (3, [(3, 4), (4, 4)], '+'), (3, [(4, 1), (5, 1)], '-'), (15, [(4, 2), (4, 3)], '*'), (9, [(5, 2), (5, 3)], '+'), (1, [(5, 4), (5, 5)], '-')])
+
+
+======================================================================
+FAIL: test_prop_GAC_8 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(6, [(11, [(1, 1), (2, 1)], '+'), (2, [(1, 2), (1, 3)], '/'), (20, [(1, 4), (2, 4)], '*'), (6, [(1, 5), (1, 6), (2, 6), (3, 6)], '*'), (3, [(2, 2), (2, 3)], '-'), (3, [(2, 5), (3, 5)], '/'), (240, [(3, 1), (3, 2), (4, 1), (4, 2)], '*'), (6, [(3, 3), (3, 4)], '*'), (6, [(4, 3), (5, 3)], '*'), (7, [(4, 4), (5, 4), (5, 5)], '+'), (30, [(4, 5), (4, 6)], '*'), (6, [(5, 1), (5, 2)], '*'), (9, [(5, 6), (6, 6)], '+'), (8, [(6, 1), (6, 2), (6, 3)], '+'), (2, [(6, 4), (6, 5)], '/')])
+
+
+======================================================================
+FAIL: test_prop_GAC_9 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(6, [(2, [(1, 1), (1, 2), (1, 3)], '/'), (3, [(1, 4), (1, 5)], '-'), (11, [(1, 6), (2, 6), (3, 6)], '+'), (2, [(2, 1), (2, 2), (2, 3)], '/'), (40, [(2, 4), (2, 5), (3, 4), (3, 5)], '*'), (14, [(3, 1), (4, 1), (5, 1), (6, 1)], '+'), (3600, [(3, 2), (3, 3), (4, 2), (4, 3), (5, 2), (5, 3)], '*'), (120, [(4, 4), (5, 4), (6, 4)], '*'), (1, [(4, 5), (4, 6), (5, 5), (5, 6)], '-'), (5, [(6, 2), (6, 3)], '-'), (5, [(6, 5), (6, 6)], '+')])
+
+
+----------------------------------------------------------------------
+Ran 44 tests in 1.358s
+
+FAILED (failures=19)
+----------------------------------------------------------------------
+Time spent:
+
+test_bne_grid_1: 0.0003s
+test_bne_grid_2: 0.0002s
+test_bne_grid_3: 0.0010s
+test_bne_grid_4: 0.0031s
+test_bne_grid_5: 0.0081s
+test_cages_1: 0.0000s
+test_cages_2: 0.0001s
+test_cages_3: 0.0001s
+test_cages_4: 0.0004s
+test_cages_5: 0.0022s
+test_cages_6: 0.0002s
+test_nary_grid_1: 0.0001s
+test_nary_grid_2: 0.0004s
+test_nary_grid_3: 0.0028s
+test_nary_grid_4: 0.0234s
+test_bin_prop_fc_0: 0.0003s
+test_bin_prop_fc_1: 0.0012s
+test_bin_prop_fc_2: 0.0012s
+test_bin_prop_fc_3: 0.0012s
+test_bin_prop_fc_4: 0.0012s
+test_prop_fc_0: 0.0005s
+test_prop_fc_1: 0.2684s
+test_prop_fc_2: 0.5075s
+test_prop_fc_3: 0.0007s
+test_prop_fc_4: 0.4998s
+----------------------------------------------------------------------
+Grades:
+
+FC: 0.5/0.5
+GAC: 0.0/0.75
+MRV: 0.0/0.25
+DH: 0.0/0.25
+BINARY: 0.25/0.25
+NARY: 0.25/0.25
+CAGEY: 0.375/0.5
+
+TOTAL: 1.375/2.75
+Code quality: ?/0.25
+
+Running time: 2024_01_23-14:25:59
+
+===========================================
+test_bne_grid_1 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_2 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_3 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_4 (__main__.TestBinaryGrid) ... ok
+test_bne_grid_5 (__main__.TestBinaryGrid) ... ok
+test_cage_existence (__main__.TestCageConstraints) ... ok
+test_cages_1 (__main__.TestCageConstraints) ... ok
+test_cages_2 (__main__.TestCageConstraints) ... ok
+test_cages_3 (__main__.TestCageConstraints) ... ok
+test_cages_4 (__main__.TestCageConstraints) ... ok
+test_cages_5 (__main__.TestCageConstraints) ... ok
+test_cages_6 (__main__.TestCageConstraints) ... ok
+test_dh_1 (__main__.TestDH) ... FAIL
+test_dh_2 (__main__.TestDH) ... FAIL
+test_dh_3 (__main__.TestDH) ... FAIL
+test_dh_4 (__main__.TestDH) ... FAIL
+test_mrv_1 (__main__.TestMRV) ... FAIL
+test_mrv_2 (__main__.TestMRV) ... FAIL
+test_mrv_3 (__main__.TestMRV) ... FAIL
+test_mrv_4 (__main__.TestMRV) ... FAIL
+test_nary_grid_1 (__main__.TestNaryGrid) ... ok
+test_nary_grid_2 (__main__.TestNaryGrid) ... ok
+test_nary_grid_3 (__main__.TestNaryGrid) ... ok
+test_nary_grid_4 (__main__.TestNaryGrid) ... ok
+test_bin_prop_fc_0 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_1 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_2 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_3 (__main__.TestPropFC) ... ok
+test_bin_prop_fc_4 (__main__.TestPropFC) ... ok
+test_prop_fc_0 (__main__.TestPropFC) ... ok
+test_prop_fc_1 (__main__.TestPropFC) ... ok
+test_prop_fc_2 (__main__.TestPropFC) ... ok
+test_prop_fc_3 (__main__.TestPropFC) ... ok
+test_prop_fc_4 (__main__.TestPropFC) ... ok
+test_prop_GAC_0 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_1 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_2 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_3 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_4 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_5 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_6 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_7 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_8 (__main__.TestPropGAC) ... FAIL
+test_prop_GAC_9 (__main__.TestPropGAC) ... FAIL
+
+======================================================================
+FAIL: test_dh_1 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_2 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_3 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_dh_4 (__main__.TestDH)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord DH
+
+======================================================================
+FAIL: test_mrv_1 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_2 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_3 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_mrv_4 (__main__.TestMRV)
+----------------------------------------------------------------------
+AssertionError: False is not true : No Variable Returned from Ord MRV
+
+======================================================================
+FAIL: test_prop_GAC_0 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(3, [(3, [(1, 1), (2, 1)], '+'), (2, [(1, 2), (2, 2)], '-'), (6, [(1, 3), (2, 3), (3, 3)], '*'), (5, [(3, 1), (3, 2)], '+')])
+
+
+======================================================================
+FAIL: test_prop_GAC_1 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(6, [(1, 1), (2, 1)], '*'), (3, [(1, 2), (1, 3)], '+'), (3, [(1, 4), (2, 4)], '-'), (7, [(2, 2), (2, 3)], '+'), (2, [(3, 1), (3, 2)], '/'), (3, [(3, 3), (4, 3)], '-'), (6, [(3, 4), (4, 4)], '*'), (7, [(4, 1), (4, 2)], '+')])
+
+
+======================================================================
+FAIL: test_prop_GAC_2 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(16, [(1, 1), (1, 2), (2, 2)], '*'), (7, [(1, 3), (1, 4), (2, 3)], '+'), (4, [(2, 4)], '?'), (2, [(2, 1), (3, 1)], '-'), (2, [(3, 3), (3, 4)], '/'), (2, [(4, 3), (4, 4)], '/'), (12, [(3, 2), (4, 1), (4, 2)], '*')])
+
+
+======================================================================
+FAIL: test_prop_GAC_3 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(4, [(1, 1)], '?'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (2, 4)], '-'), (6, [(2, 1), (2, 2), (3, 2)], '+'), (12, [(2, 3), (3, 3), (3, 4)], '*'), (1, [(3, 1), (4, 1)], '-'), (5, [(4, 2), (4, 3)], '+'), (2, [(4, 4)], '?')])
+
+
+======================================================================
+FAIL: test_prop_GAC_4 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(4, [(2, [(1, 1), (1, 2)], '/'), (3, [(1, 3), (1, 4), (2, 3)], '*'), (8, [(2, 1), (2, 2), (3, 1)], '+'), (6, [(2, 4), (3, 4)], '*'), (2, [(3, 2), (3, 3)], '-'), (2, [(4, 1), (4, 2)], '-'), (2, [(4, 3), (4, 4)], '/')])
+
+
+======================================================================
+FAIL: test_prop_GAC_5 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(4, [(1, 1), (2, 1)], '-'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (2, 4)], '-'), (1, [(1, 5), (2, 5)], '-'), (9, [(2, 2), (2, 3)], '+'), (3, [(3, 1), (3, 2)], '-'), (6, [(3, 3), (3, 4), (4, 4)], '*'), (9, [(3, 5), (4, 5)], '+'), (7, [(4, 1), (5, 1)], '+'), (3, [(4, 2), (4, 3)], '-'), (6, [(5, 2), (5, 3)], '*'), (4, [(5, 4), (5, 5)], '-')])
+
+
+======================================================================
+FAIL: test_prop_GAC_6 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(10, [(1, 1), (1, 2), (2, 1), (2, 2)], '+'), (18, [(1, 3), (1, 4), (2, 3), (2, 4), (3, 4)], '+'), (2, [(1, 5), (2, 5), (3, 5)], '-'), (1, [(3, 1), (3, 2), (3, 3)], '-'), (600, [(4, 1), (4, 2), (4, 3), (5, 1), (5, 2), (5, 3)], '*'), (2, [(4, 4), (5, 4), (5, 5)], '/'), (3, [(4, 5)], '?')])
+
+
+======================================================================
+FAIL: test_prop_GAC_7 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(5, [(2, [(1, 1), (2, 1)], '-'), (2, [(1, 2), (1, 3)], '/'), (1, [(1, 4), (1, 5)], '-'), (1, [(2, 2)], '?'), (2, [(2, 3), (2, 4)], '-'), (9, [(2, 5), (3, 5), (4, 5)], '+'), (6, [(3, 1), (3, 2)], '*'), (4, [(3, 3)], '?'), (3, [(3, 4), (4, 4)], '+'), (3, [(4, 1), (5, 1)], '-'), (15, [(4, 2), (4, 3)], '*'), (9, [(5, 2), (5, 3)], '+'), (1, [(5, 4), (5, 5)], '-')])
+
+
+======================================================================
+FAIL: test_prop_GAC_8 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(6, [(11, [(1, 1), (2, 1)], '+'), (2, [(1, 2), (1, 3)], '/'), (20, [(1, 4), (2, 4)], '*'), (6, [(1, 5), (1, 6), (2, 6), (3, 6)], '*'), (3, [(2, 2), (2, 3)], '-'), (3, [(2, 5), (3, 5)], '/'), (240, [(3, 1), (3, 2), (4, 1), (4, 2)], '*'), (6, [(3, 3), (3, 4)], '*'), (6, [(4, 3), (5, 3)], '*'), (7, [(4, 4), (5, 4), (5, 5)], '+'), (30, [(4, 5), (4, 6)], '*'), (6, [(5, 1), (5, 2)], '*'), (9, [(5, 6), (6, 6)], '+'), (8, [(6, 1), (6, 2), (6, 3)], '+'), (2, [(6, 4), (6, 5)], '/')])
+
+
+======================================================================
+FAIL: test_prop_GAC_9 (__main__.TestPropGAC)
+----------------------------------------------------------------------
+AssertionError: False is not true : 
+
+Student code threw exception "cannot unpack non-iterable NoneType object". Failed to solve board!
+(6, [(2, [(1, 1), (1, 2), (1, 3)], '/'), (3, [(1, 4), (1, 5)], '-'), (11, [(1, 6), (2, 6), (3, 6)], '+'), (2, [(2, 1), (2, 2), (2, 3)], '/'), (40, [(2, 4), (2, 5), (3, 4), (3, 5)], '*'), (14, [(3, 1), (4, 1), (5, 1), (6, 1)], '+'), (3600, [(3, 2), (3, 3), (4, 2), (4, 3), (5, 2), (5, 3)], '*'), (120, [(4, 4), (5, 4), (6, 4)], '*'), (1, [(4, 5), (4, 6), (5, 5), (5, 6)], '-'), (5, [(6, 2), (6, 3)], '-'), (5, [(6, 5), (6, 6)], '+')])
+
+
+----------------------------------------------------------------------
+Ran 44 tests in 1.328s
+
+FAILED (failures=18)
+----------------------------------------------------------------------
+Time spent:
+
+test_bne_grid_1: 0.0003s
+test_bne_grid_2: 0.0002s
+test_bne_grid_3: 0.0010s
+test_bne_grid_4: 0.0030s
+test_bne_grid_5: 0.0077s
+test_cages_1: 0.0000s
+test_cages_2: 0.0001s
+test_cages_3: 0.0001s
+test_cages_4: 0.0004s
+test_cages_5: 0.0023s
+test_cages_6: 0.0002s
+test_nary_grid_1: 0.0001s
+test_nary_grid_2: 0.0004s
+test_nary_grid_3: 0.0029s
+test_nary_grid_4: 0.0227s
+test_bin_prop_fc_0: 0.0003s
+test_bin_prop_fc_1: 0.0012s
+test_bin_prop_fc_2: 0.0014s
+test_bin_prop_fc_3: 0.0012s
+test_bin_prop_fc_4: 0.0012s
+test_prop_fc_0: 0.0005s
+test_prop_fc_1: 0.2623s
+test_prop_fc_2: 0.4952s
+test_prop_fc_3: 0.0007s
+test_prop_fc_4: 0.4901s
+----------------------------------------------------------------------
+Grades:
+
+FC: 0.5/0.5
+GAC: 0.0/0.75
+MRV: 0.0/0.25
+DH: 0.0/0.25
+BINARY: 0.25/0.25
+NARY: 0.25/0.25
+CAGEY: 0.5/0.5
+
+TOTAL: 1.5/2.75
+Code quality: ?/0.25
+
+Running time: 2024_01_23-14:26:38
+
+===========================================

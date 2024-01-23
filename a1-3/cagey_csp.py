@@ -189,12 +189,12 @@ def cagey_csp_model(cagey_grid):
         con.add_satisfying_tuples(sat_tup)
         csp.add_constraint(con)
 
+    
         
 
-    # Flatten the vars list to match the 1D structure if needed.
-    vars_flat = [var for sublist in vars for var in sublist]
+    
        
-    return csp, vars_flat
+    return csp, csp.get_all_vars()
 
 
 def find_sat_tuples(n, target, cage_vars, op):
@@ -231,8 +231,7 @@ def find_sat_tuples(n, target, cage_vars, op):
             sat_tup.append((op, ) +combo)
 
     # Remove duplicates if any
-    sat_tup = [(t[0],) + tuple(sorted(t[1:])) for t in set(sat_tup)]
-    print(sat_tup)
+ 
 
     sat_tup = list(set(sat_tup))
 
