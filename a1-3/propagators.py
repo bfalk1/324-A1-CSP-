@@ -71,6 +71,8 @@
          for gac we initialize the GAC queue with all constraints containing V.
    '''
 
+import itertools
+
 def prop_BT(csp, newVar=None):
     '''Do plain backtracking propagation. That is, do no
     propagation at all. Just check fully instantiated constraints'''
@@ -117,5 +119,30 @@ def prop_GAC(csp, newVar=None):
     '''Do GAC propagation. If newVar is None we do initial GAC enforce
        processing all constraints. Otherwise we do GAC enforce with
        constraints containing newVar on GAC Queue'''
-    #IMPLEMENT
-    pass
+    pruned = []
+    if not newVar:
+        for con in csp.get_all_cons():
+            pruned += remove_inconsistent(con)
+    else:
+        for con in csp.get_cons_with_var(newVar):
+            pruned += remove_inconsistent(con)
+
+    return True, pruned
+
+
+def remove_inconsistent(con):
+    pruned = []
+    for var in con.get_unasgn_vars():
+        cur_domain = var.cur_domain()
+        cur_domain_copy = cur_domain.copy()
+
+        for val in cur_domain_copy:
+            # If the value violates a constraint, prune it
+            if not con.check_var_val(var, val):
+                var.prune_value(val)
+                pruned.append((var, val))
+                cur_domain.remove(val)
+
+    return pruned
+
+

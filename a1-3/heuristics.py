@@ -43,9 +43,6 @@ def ord_dh(csp):
 
     return result
 
-
-
-
 def ord_mrv(csp):
     ''' return variable according to the Minimum Remaining Values heuristic '''
     temp = csp.get_all_vars()[0]
