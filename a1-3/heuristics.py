@@ -29,25 +29,30 @@ var_ordering == a function with the following template
 
 def ord_dh(csp):
     ''' return variables according to the Degree Heuristic '''
-    result = csp.get_all_unasgn_vars()[0]
-    temp = 0
+    result = csp.get_all_unasgn_vars()[0]  # Start with the first unassigned variable as a default.
+    temp = 0  # Temporary variable to hold the max count of constraints involving unassigned variables.
 
-    for var in csp.get_all_unasgn_vars():
-        counter = 0
-        for c in csp.get_cons_with_var(var):
-            if c.get_n_unasgn() > 1:
+    for var in csp.get_all_unasgn_vars():  # Iterate over all unassigned variables.
+        counter = 0  # Count constraints involving 'var' that also involve other unassigned variables.
+        for c in csp.get_cons_with_var(var):  # Get constraints that include 'var'.
+            if c.get_n_unasgn() > 1:  # Count only constraints with more than one unassigned variable.
                 counter += 1
-        if counter > temp:
-            result = var
-            temp = counter
+        if counter > temp:  # If 'var' is involved in more such constraints than previous max,
+            result = var  # update 'result' to be 'var'.
+            temp = counter  # Update 'temp' to reflect the new maximum.
 
-    return result
-
+    return result  # Return the variable involved in the maximum number of applicable constraints.
+   
 def ord_mrv(csp):
-    ''' return variable according to the Minimum Remaining Values heuristic '''
+    # Initialize 'temp' with the first variable, assuming all variables initially have the same chance.
     temp = csp.get_all_vars()[0]
-    for var in csp.get_all_unasgn_vars():
-        cur_domain_size = var.cur_domain_size()
+    
+    for var in csp.get_all_unasgn_vars():  # Iterate through all unassigned variables in the CSP.
+        cur_domain_size = var.cur_domain_size()  # Get the current number of legal values for 'var'.
+        
+        # Check if 'var' has fewer legal values than 'temp', indicating it's more constrained.
         if cur_domain_size < temp.cur_domain_size():
-            temp = var
-    return temp
+            temp = var  # Update 'temp' to the new most constrained variable.
+            
+    return temp  # Return the variable with the fewest legal values remaining.
+
