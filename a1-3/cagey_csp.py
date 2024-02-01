@@ -88,29 +88,34 @@ from cspbase import *
 import itertools
 
 def binary_ne_grid(cagey_grid):
-    
-    n, _ = cagey_grid
+    n, _ = cagey_grid  # Grid size from the puzzle input.
 
-    csp = CSP("Cagey Binary")
+    csp = CSP("Cagey Binary")  # Initialize CSP for Cagey grid.
 
+    # Create grid variables with domains set from 1 to n.
     vars = [[Variable(f'V{i}{j}', domain=list(range(1, n+1))) for j in range(n)] for i in range(n)]
-    for i in range(n):
+    for i in range(n):  # Add each variable to the CSP.
         for j in range(n):
             csp.add_var(vars[i][j])
 
-
+    # Add binary not-equal constraints for rows and columns.
     for i in range(n):
         for j in range(n):
-            for k in range(j + 1, n):
+            for k in range(j + 1, n):  # Iterate over pairs of variables.
+                # Row constraint to ensure different values across the row.
                 row_con = Constraint(f"Row-{i}-{j}-{k}", [vars[i][j], vars[i][k]])
+                # Add satisfying tuples for the row constraint (all unique pairs).
                 row_con.add_satisfying_tuples([(x, y) for x in range(1, n + 1) for y in range(1, n + 1) if x != y])
-                csp.add_constraint(row_con)
+                csp.add_constraint(row_con)  # Enforce row uniqueness in the CSP.
 
+                # Column constraint to ensure different values down the column.
                 col_con = Constraint(f"Col-{i}-{j}-{k}", [vars[j][i], vars[k][i]])
+                # Add satisfying tuples for the column constraint (all unique pairs).
                 col_con.add_satisfying_tuples([(x, y) for x in range(1, n + 1) for y in range(1, n + 1) if x != y])
-                csp.add_constraint(col_con)
+                csp.add_constraint(col_con)  # Enforce column uniqueness in the CSP.
     
-    return csp,vars
+    return csp, vars  # Return configured CSP and variable grid for Cagey puzzle.
+
 
 
 def all_diff_tuples(size):
@@ -118,83 +123,58 @@ def all_diff_tuples(size):
     return [tup for tup in itertools.permutations(range(1, size+1), size)]
 
 def nary_ad_grid(cagey_grid):
+    n, _ = cagey_grid  # Extract grid size from input, ignoring cage constraints.
 
-    n, _ = cagey_grid
+    csp = CSP("Cagey Binary")  # Create CSP instance for the Cagey puzzle.
 
-    csp = CSP("Cagey Binary")
-
+    # Initialize grid variables with domains from 1 to n.
     vars = [[Variable(f'V{i}{j}', domain=list(range(1, n+1))) for j in range(n)] for i in range(n)]
-    for i in range(n):
+    for i in range(n):  # Add variables to the CSP.
         for j in range(n):
             csp.add_var(vars[i][j])
 
-    
-
     for i in range(n):
-        row_vars = vars[i]
-        row_con = Constraint(f"Row-{i}-alldiff", row_vars)
-        row_con.add_satisfying_tuples(all_diff_tuples(n))
+        row_vars = vars[i]  # Collect variables for the ith row.
+        row_con = Constraint(f"Row-{i}-alldiff", row_vars)  # Create all-different constraint for the row.
+        row_con.add_satisfying_tuples(all_diff_tuples(n))  # Generate and add satisfying tuples for the constraint.
+        csp.add_constraint(row_con)  # Add row constraint to the CSP.
 
-        csp.add_constraint(row_con)
+        col_vars = [vars[x][i] for x in range(n)]  # Should collect variables for the ith column (correction for clarity).
+        col_con = Constraint(f"Col-{i}-alldiff", col_vars)
+        col_con.add_satisfying_tuples(all_diff_tuples(n))  # Generate and add satisfying tuples for the constraint.
+        csp.add_constraint(col_con)  # Add column constraint to the CSP.
 
-        col_vars = vars[j]
-        col_con = Constraint(f"Row-{j}-alldiff", col_vars)
-        col_con.add_satisfying_tuples(all_diff_tuples(n))
-
-        csp.add_constraint(col_con)
-
-
-        
-    return csp,vars
-
-    
-            
+    return csp, vars  # Return CSP model and variables for Cagey puzzle.
 
 def cagey_csp_model(cagey_grid):
-    n, cages = cagey_grid
+    n, cages = cagey_grid  # Extract grid size and cage definitions.
 
-    # Create the CSP object.
-    csp = CSP("cagey grid")
+    csp = CSP("cagey grid")  # Initialize CSP for the Cagey puzzle.
 
-    # Initialize the variables with the expected naming convention.
+    # Initialize grid variables with domains from 1 to n, adjusting indices for 1-based.
     vars = [[Variable(f'Cell{i}{j}', domain=list(range(1, n+1))) for j in range(1, n+1)] for i in range(1, n+1)]
     for i in range(1, n+1):
         for j in range(1, n+1):
-            # Add each variable to the CSP.
-            csp.add_var(vars[i-1][j-1])
+            csp.add_var(vars[i-1][j-1])  # Add variables to CSP, correcting index to 0-based for list.
 
-   
-    # Create and add constraints for each cage.
+    # Loop through each cage to set up constraints.
     for cage in cages:
-        target, cells, op = cage
-        
-       # Create a special Variable object for the operation
+        target, cells, op = cage  # Extract target value, cells, and operation of the cage.
+
+        # Create a variable for cage operations, initially allowing all operations plus a 'f' for flexibility.
         op_var_name = f'Cage_op({target}:{op}:[{", ".join(f"Var-Cell({cell[0]},{cell[1]})" for cell in cells)}])'
-        
-
         op_var = Variable(op_var_name, ['+', '-', '/', '*', 'f'])
-        csp.add_var(op_var)
-        # Fetch the corresponding variable objects for each cell in the cage and prepend the operation variable.
-        con_vars = [op_var]  # Start with a list containing the first element
-        con_vars.extend(vars[cell[0] - 1][cell[1] - 1] for cell in cells)  # Extend the list with the list comprehension
+        csp.add_var(op_var)  # Add operation variable to CSP.
 
+        # Gather variables corresponding to each cell in the cage, starting with the operation variable.
+        con_vars = [op_var] + [vars[cell[0] - 1][cell[1] - 1] for cell in cells]  # Correcting collection of cell variables.
 
-        # Create a constraint with these variables.
+        # Create a constraint for the cage using these variables.
         con = Constraint(f"Cage{cells}", con_vars)
 
-        # Find satisfying tuples for the constraint.
+        # Generate satisfying tuples for the constraint based on the operation and target value.
         sat_tup = find_sat_tuples(n, target, con_vars, op)
-        
-        # Add satisfying tuples to the constraint and add it to the CSP.
-        con.add_satisfying_tuples(sat_tup)
-        csp.add_constraint(con)
 
-    
-        
-
-    
-       
-    return csp, csp.get_all_vars()
 
 
 def find_sat_tuples(n, target, cage_vars, op):
