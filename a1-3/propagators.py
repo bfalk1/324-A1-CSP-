@@ -90,45 +90,46 @@ def prop_BT(csp, newVar=None):
     return True, []
 
 def prop_FC(csp, newVar=None):
-    '''Do forward checking. That is check constraints with
+   '''Do forward checking. That is check constraints with
        only one uninstantiated variable. Remember to keep
        track of all pruned variable,value pairs and return '''
-    pruned = []
-    if not newVar:
+   
+    pruned = []  # Initialize list for tracking pruned values.
+    if not newVar:  # No action needed if no variable is recently assigned.
         return True, pruned
-    for c in csp.get_cons_with_var(newVar):
-        if c.get_n_unasgn() == 1:
-            var = c.get_unasgn_vars()[0] # Single unassigned var in cons
-            cur_domain = var.cur_domain()
+    for c in csp.get_cons_with_var(newVar):  # Iterate over constraints affected by newVar.
+        if c.get_n_unasgn() == 1:  # Target constraints with one variable left to assign.
+            var = c.get_unasgn_vars()[0]  # Identify the variable to potentially prune.
+            cur_domain = var.cur_domain()  # Access the domain before potential pruning.
+            cur_domain_copy = cur_domain.copy()  # Worfk on a copy to avoid iteration issues.
 
-            cur_domain_copy = cur_domain.copy()
+            for val in cur_domain_copy:  # Evaluate each domain value for consistency.
+                if not c.check_var_val(var, val):  # Prune if value violates the constraint.
+                    var.prune_value(val)  # Execute pruning to enforce consistency.
+                    pruned.append((var, val))  # Log pruning for backtrack restoration.
+                    cur_domain.remove(val)  # Update domain reflectively after pruning.
 
-            for val in cur_domain_copy:
-                # If the value violates a constraint, prune it
-                if not c.check_var_val(var, val):
-                    var.prune_value(val)
-                    pruned.append((var, val))
-                    cur_domain.remove(val)
-
-            if len(cur_domain) == 0:
+            if len(cur_domain) == 0:  # Check for an empty domain indicating a dead-end.
                 return False, pruned
 
-    return True, pruned
+    return True, pruned  # Return success if forward checking imposes no dead-ends.
 
 def prop_GAC(csp, newVar=None):
-    '''Do GAC propagation. If newVar is None we do initial GAC enforce
+     '''Do GAC propagation. If newVar is None we do initial GAC enforce
        processing all constraints. Otherwise we do GAC enforce with
        constraints containing newVar on GAC Queue'''
-    pruned = []
+   
+    pruned = []  # List to keep track of pruned variable-value pairs.
     if not newVar:
+        # Initial GAC enforcement: process all constraints to establish GAC.
         for con in csp.get_all_cons():
-            pruned += remove_inconsistent(con)
+            pruned += remove_inconsistent(con)  # Prune inconsistent values from all constraints.
     else:
+        # GAC enforcement for constraints involving the recently assigned variable.
         for con in csp.get_cons_with_var(newVar):
-            pruned += remove_inconsistent(con)
+            pruned += remove_inconsistent(con)  # Prune values only from constraints affected by newVar.
 
-    return True, pruned
-
+    return True, pruned  # Return success and any pruned variable-value pairs.
 
 def remove_inconsistent(con):
     pruned = []
